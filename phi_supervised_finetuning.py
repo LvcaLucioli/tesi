@@ -182,29 +182,30 @@ def extract_letter(testo):
         return ''
 
 def main():
+    set_seed(42)
+
     parser = HfArgumentParser((FinetuneArguments))
     finetuning_arguments  = parser.parse_args_into_dataclasses()[0]
     
     metric_rouge = evaluate.load("rouge")
     
-    def r_at_k(collection, embeddings, ids, k):
-        score = 0
-        step = 0
+        # def r_at_k(collection, embeddings, ids, k):
+        #     score = 0
+        #     step = 0
 
-        for pred, id in zip(embeddings, ids):
-            results = collection.query(
-                    query_embeddings=pred,
-                    n_results=k,
-                    include=["documents"]
-            )
-            if str(id) in results["ids"][0]:
-                score += 1
-            step += 1
-        return (score / len(ids))
+        #     for pred, id in zip(embeddings, ids):
+        #         results = collection.query(
+        #                 query_embeddings=pred,
+        #                 n_results=k,
+        #                 include=["documents"]
+        #         )
+        #         if str(id) in results["ids"][0]:
+        #             score += 1
+        #         step += 1
+        #     return (score / len(ids))
 
 
     def evaluate_multiple_choice(model, tokenizer, dataset):
-        set_seed(42)
         
         predictions = []
 
@@ -235,8 +236,7 @@ def main():
         return metrics
 
 
-    def evaluate_question_answering(dataset):
-        set_seed(42)
+    def evaluate_question_answering(dataset, model_name):
                 
         # tokenized_prompt = tokenizer(dataset["test"]["text"], padding=True, return_tensors='pt').to('cuda:0')
         
@@ -251,33 +251,57 @@ def main():
         #                   max_new_tokens=512)
         
         # preds = tokenizer.batch_decode(model_op, skip_special_tokens=True)
+                
+        pipe = pipeline(task="text-generation", 
+                        model=model, 
+                        tokenizer=tokenizer,
+                        max_new_tokens=64,
+                        do_sample=True,
+                        top_k=finetuning_arguments.top_k,
+                        top_p=finetuning_arguments.top_p,
+                        temperature=finetuning_arguments.temperature,
+                        # num_beams=finetuning_arguments.num_beams,
+                        
+        )
+        
+        preds = [pipe(instance) for instance in dataset["test"]["text"]]
         
         
-        tokenized_prompts = []
+        answers = []
+        i = 0
+        for pred in preds:
+            answers.append({"generated_text" : pred[0]["generated_text"][pred[0]["generated_text"].find("### Answer:") + len("### Answer:"):],
+            "id" : dataset["test"]["id"][i]})
+            i = i + 1
+
+        processed_preds = []
+        for pred in preds:
+            processed_preds.append(pred[0]["generated_text"][pred[0]["generated_text"].find("### Answer:") + len("### Answer:"):])
+
+        with open(f'''generated_text_{model_name}.json''', 'a') as file:
+            json.dump(answers, file, indent=4)
         
-        for text in dataset["test"]["text"]:
-            tokenized_prompts.append(tokenizer(text, padding=True, return_tensors='pt'))
+        
+        # for text in dataset["test"]["text"]:
+        #     tokenized_prompts.append(tokenizer(text, padding=True, return_tensors='pt'))
             
-        model_op = []
-        for tokenized in tokenized_prompts:
-            model_op.append(model.generate(input_ids=tokenized['input_ids'].to("cuda:0"),
-                          attention_mask=tokenized['attention_mask'].to("cuda:0"),
-                        #   renormalize_logits=False,
-                          do_sample=True,
-                        #   use_cache=True,
-                        #   num_beams=finetuning_arguments.num_beams,
-                        #   top_k=finetuning_arguments.top_k,
-                        #   top_p=finetuning_arguments.top_p,
-                        #   temperature=finetuning_arguments.temperature,
-                          max_new_tokens=450))
-        preds = []
-        for encoded in model_op:
-            preds.append(tokenizer.batch_decode(encoded, skip_special_tokens=True)[0])
+        # model_op = []
+        # for tokenized in tokenized_prompts:
+        #     model_op.append(model.generate(input_ids=tokenized['input_ids'].to("cuda:0"),
+        #                   attention_mask=tokenized['attention_mask'].to("cuda:0"),
+        #                 #   renormalize_logits=False,
+        #                   do_sample=True,
+        #                 #   use_cache=True,
+        #                 #   num_beams=finetuning_arguments.num_beams,
+        #                 #   top_k=finetuning_arguments.top_k,
+        #                 #   top_p=finetuning_arguments.top_p,
+        #                 #   temperature=finetuning_arguments.temperature,
+        #                   max_new_tokens=32))
+        # preds = []
+        # for encoded in model_op:
+        #     preds.append(tokenizer.batch_decode(encoded, skip_special_tokens=True)[0])
         
-        
-        processed_preds = [pred[pred.find("### Answer:") + len("### Answer:"):] for pred in preds]
-  
-        processed_preds = ["\n".join(nltk.sent_tokenize(pred)) for pred in preds]
+        processed_preds = ["\n".join(nltk.sent_tokenize(pred)) for pred in processed_preds]
         processed_labels = ["\n".join(nltk.sent_tokenize(label)) for label in dataset["test"]["answer"]]
         
         result = metric_rouge.compute(predictions=processed_preds, references=processed_labels, use_stemmer=True)
@@ -291,41 +315,41 @@ def main():
 
         result["gen_len"] = np.mean([np.count_nonzero(pred != tokenizer.pad_token_id) for pred in processed_preds])
         
-        tokenized_preds = rk_tokenizer(processed_preds,
-                                        add_special_tokens=False,
-                                        padding=True,
-                                        truncation=True,
-                                        return_tensors="pt",
-                                        return_attention_mask=True).to("cuda:0")
+        # tokenized_preds = rk_tokenizer(processed_preds,
+        #                                 add_special_tokens=False,
+        #                                 padding=True,
+        #                                 truncation=True,
+        #                                 return_tensors="pt",
+        #                                 return_attention_mask=True).to("cuda:0")
 
-        for input_ids in tokenized_preds["input_ids"]:
-            input_ids = torch.cat((input_ids, torch.tensor([102]).to("cuda:0")), dim=0).to("cuda:0")
+        # for input_ids in tokenized_preds["input_ids"]:
+        #     input_ids = torch.cat((input_ids, torch.tensor([102]).to("cuda:0")), dim=0).to("cuda:0")
             
         
-        output = rk_model(tokenized_preds["input_ids"], attention_mask=tokenized_preds["attention_mask"])
+        # output = rk_model(tokenized_preds["input_ids"], attention_mask=tokenized_preds["attention_mask"])
 
-        embeddings = []
-        with torch.no_grad():
-            for last_hidden_state in output.last_hidden_state:
-                cls_embedding = last_hidden_state[0, :].cpu().numpy().tolist()
-                embeddings.append(cls_embedding)
+        # embeddings = []
+        # with torch.no_grad():
+        #     for last_hidden_state in output.last_hidden_state:
+        #         cls_embedding = last_hidden_state[0, :].cpu().numpy().tolist()
+        #         embeddings.append(cls_embedding)
                 
-        result["r@1"] = r_at_k(collection, embeddings, dataset["test"]["id"], 1)
-        result["r@3"] = r_at_k(collection, embeddings, dataset["test"]["id"], 3)
-        result["r@5"] = r_at_k(collection, embeddings, dataset["test"]["id"], 5)
-        result["r@10"] = r_at_k(collection, embeddings, dataset["test"]["id"], 10)
-        result["r@20"] = r_at_k(collection, embeddings, dataset["test"]["id"], 20)
-        result["r@50"] = r_at_k(collection, embeddings, dataset["test"]["id"], 50)
+        # result["r@1"] = r_at_k(collection, embeddings, dataset["test"]["id"], 1)
+        # result["r@3"] = r_at_k(collection, embeddings, dataset["test"]["id"], 3)
+        # result["r@5"] = r_at_k(collection, embeddings, dataset["test"]["id"], 5)
+        # result["r@10"] = r_at_k(collection, embeddings, dataset["test"]["id"], 10)
+        # result["r@20"] = r_at_k(collection, embeddings, dataset["test"]["id"], 20)
+        # result["r@50"] = r_at_k(collection, embeddings, dataset["test"]["id"], 50)
         
         result["model_name"] = finetuning_arguments.model_name
-        result["temperature"] = finetuning_arguments.temperature
-        result["top_p"] = finetuning_arguments.top_p
-        result["top_k"] = finetuning_arguments.top_k
-        result["num_beams"] = finetuning_arguments.num_beams
-        result["task"] = finetuning_arguments.training_task
+        # result["temperature"] = finetuning_arguments.temperature
+        # result["top_p"] = finetuning_arguments.top_p
+        # result["top_k"] = finetuning_arguments.top_k
+        # result["num_beams"] = finetuning_arguments.num_beams
+        # result["task"] = finetuning_arguments.training_task
         result["datetime"] = datetime.now().isoformat()
         
-        with open('result.json', 'a') as file:
+        with open('rouge_result.json', 'a') as file:
             json.dump(result, file, indent=4)
         
         return result 
@@ -363,7 +387,6 @@ def main():
     elif finetuning_arguments.training_task == "question-answering":
         dataset = load_qna_dataset(finetuning_arguments.first_n)
         
-    set_seed(42)
     
     dataset = Dataset.from_dict(dataset.to_dict(orient='list'))
     dataset = dataset.train_test_split(test_size=0.2)
@@ -396,7 +419,7 @@ def main():
     if finetuning_arguments.training_task == "multiple-choice":
         print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
     else:
-        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset)}''')
+        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset, finetuning_arguments.new_model_name + '_BASE_ ' + finetuning_arguments.training_task)}''')
     
 
     response_template = "\n### Answer:"
@@ -434,7 +457,7 @@ def main():
         # max_steps=max_steps,
         # warmup_ratio=warmup_ratio,
         # group_by_length=group_by_length,
-        lr_scheduler_type="constant",
+        lr_scheduler_type="cosine",
         report_to="wandb",
         run_name=f"{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}-{datetime.now().day}-{datetime.now().hour}-{datetime.now().minute}",
     )
@@ -473,6 +496,7 @@ def main():
     if finetuning_arguments.training_task == "multiple-choice":
         print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(finetuned_model, tokenizer, dataset)}''')
     else:
-        print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset)}''')
+        print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset,
+              finetuning_arguments.new_model_name + '_' + finetuning_arguments.training_task)}''')
 
 if __name__ == "__main__":main()
