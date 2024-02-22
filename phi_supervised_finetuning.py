@@ -314,71 +314,15 @@ def main():
         processed_labels = [label.replace("\n", " ") for label in processed_labels]
 
         result["gen_len"] = np.mean([np.count_nonzero(pred != tokenizer.pad_token_id) for pred in processed_preds])
-        
-        # tokenized_preds = rk_tokenizer(processed_preds,
-        #                                 add_special_tokens=False,
-        #                                 padding=True,
-        #                                 truncation=True,
-        #                                 return_tensors="pt",
-        #                                 return_attention_mask=True).to("cuda:0")
 
-        # for input_ids in tokenized_preds["input_ids"]:
-        #     input_ids = torch.cat((input_ids, torch.tensor([102]).to("cuda:0")), dim=0).to("cuda:0")
-            
-        
-        # output = rk_model(tokenized_preds["input_ids"], attention_mask=tokenized_preds["attention_mask"])
-
-        # embeddings = []
-        # with torch.no_grad():
-        #     for last_hidden_state in output.last_hidden_state:
-        #         cls_embedding = last_hidden_state[0, :].cpu().numpy().tolist()
-        #         embeddings.append(cls_embedding)
-                
-        # result["r@1"] = r_at_k(collection, embeddings, dataset["test"]["id"], 1)
-        # result["r@3"] = r_at_k(collection, embeddings, dataset["test"]["id"], 3)
-        # result["r@5"] = r_at_k(collection, embeddings, dataset["test"]["id"], 5)
-        # result["r@10"] = r_at_k(collection, embeddings, dataset["test"]["id"], 10)
-        # result["r@20"] = r_at_k(collection, embeddings, dataset["test"]["id"], 20)
-        # result["r@50"] = r_at_k(collection, embeddings, dataset["test"]["id"], 50)
-        
         result["model_name"] = finetuning_arguments.model_name
-        # result["temperature"] = finetuning_arguments.temperature
-        # result["top_p"] = finetuning_arguments.top_p
-        # result["top_k"] = finetuning_arguments.top_k
-        # result["num_beams"] = finetuning_arguments.num_beams
-        # result["task"] = finetuning_arguments.training_task
+
         result["datetime"] = datetime.now().isoformat()
         
         with open('rouge_result.json', 'a') as file:
             json.dump(result, file, indent=4)
         
         return result 
-        
-    if finetuning_arguments.training_task == "question-answering":
-        client = chromadb.PersistentClient(path="chroma_data/")
-        rk_model = AutoModel.from_pretrained("dlicari/lsg16k-Italian-Legal-BERT", trust_remote_code=True).to("cuda:0")
-        rk_tokenizer = AutoTokenizer.from_pretrained("dlicari/lsg16k-Italian-Legal-BERT", trust_remote_code=True)
-        rk_tokenizer.pad_token_id = rk_tokenizer.eos_token_id = 2
-        rk_model.config.pad_token_id = rk_model.config.eos_token_id
-        collection = client.get_collection(
-                name="answer_embeddings_definitivo",
-            )
-    
-    def r_at_k(collection, embeddings, ids, k):
-        score = 0
-        step = 0
-
-        for pred, id in zip(embeddings, ids):
-            results = collection.query(
-                    query_embeddings=pred,
-                    n_results=k,
-                    include=["documents"]
-            )
-            
-            if str(id) in results["ids"][0]:
-                score += 1
-            step += 1
-        return (score / len(ids))
 
     if finetuning_arguments.training_task == "syntetic-question-answering":
         dataset = load_syntetic_dataset(finetuning_arguments.first_n)
@@ -416,10 +360,10 @@ def main():
     model.config.pad_token_id = model.config.eos_token_id
 
     
-    if finetuning_arguments.training_task == "multiple-choice":
-        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
-    else:
-        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset, finetuning_arguments.new_model_name + '_BASE_ ' + finetuning_arguments.training_task)}''')
+    # if finetuning_arguments.training_task == "multiple-choice":
+    #     print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
+    # else:
+    #     print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset, finetuning_arguments.new_model_name + '_BASE_ ' + finetuning_arguments.training_task)}''')
     
 
     response_template = "\n### Answer:"
@@ -457,7 +401,7 @@ def main():
         # max_steps=max_steps,
         # warmup_ratio=warmup_ratio,
         # group_by_length=group_by_length,
-        lr_scheduler_type="cosine",
+        lr_scheduler_type="linear",
         report_to="wandb",
         run_name=f"{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}-{datetime.now().day}-{datetime.now().hour}-{datetime.now().minute}",
     )

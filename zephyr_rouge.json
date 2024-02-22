@@ -1,0 +1,196 @@
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:29:41.632956",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 1.49,
+  "rouge2": 0.0,
+  "rougeL": 1.49,
+  "rougeLsum": 1.49,
+  "R": 0.99,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:31:03.770864",
+  "model_name": "lvcalucioli/zephyr_outputs"
+}
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:49:15.570067",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:52:53.110686",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:54:37.817356",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 2.17,
+  "rouge2": 0.0,
+  "rougeL": 2.17,
+  "rougeLsum": 2.17,
+  "R": 1.45,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:56:01.858395",
+  "model_name": "lvcalucioli/zephyr_outputs"
+}
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:57:29.939030",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 2.17,
+  "rouge2": 0.0,
+  "rougeL": 2.17,
+  "rougeLsum": 2.17,
+  "R": 1.45,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T22:58:47.111004",
+  "model_name": "lvcalucioli/zephyr_outputs"
+}
+{
+  "rouge1": 0.72,
+  "rouge2": 0.0,
+  "rougeL": 0.7,
+  "rougeLsum": 0.71,
+  "R": 0.47,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-15T23:35:42.831363",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta"
+}
+{
+  "rouge1": 0.94,
+  "rouge2": 0.0,
+  "rougeL": 0.94,
+  "rougeLsum": 0.94,
+  "R": 0.63,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-16T00:16:30.817025",
+  "model_name": "lvcalucioli/zephyr_outputs"
+}
+{
+  "rouge1": 0.0,
+  "rouge2": 0.0,
+  "rougeL": 0.0,
+  "rougeLsum": 0.0,
+  "R": 0.0,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-16T00:25:35.964818",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta",
+  "sample": [
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti nell'affidamento dei contratti pubblici perseguono il risultato dell'affidamento del contratto e della sua esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "l"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti garantiscono la legalit\u00e0, la trasparenza e la concorrenza nel seguente modo, in base al contesto:  1. Affidamento del contratto e esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza. 2. La concorrenza tra gli operatori economici \u00e8 funzionale a conseguire il miglior risultato possibile nell\u2019affidare ed eseguire i contratti. 3. La trasparenza \u00e8 funzionale alla massima semplicit\u00e0 e celarit\u00e0 nella corretta applicazione delle regole del codice, denominato \"Codice degli Appalti\" (D.lgs. n. 36/2023), ne assicura la piena verificabilit\u00e0. In sintesi, la legalit\u00e0, la trasparenza e la concorrenza sono garantite attraverso la massima tempestivit\u00e0, il migliore rapporto tra qualit\u00e0 e prezzo, la corretta applicazione delle regole del codice e la massima semplicit\u00e0 e celarit\u00e0 nella corretta applicazione delle regole del codice.",
+      "prediction": "p"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti perseguono il miglior risultato possibile nell'affidamento del contratto e della sua esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza. La concorrenza tra gli operatori economici \u00e8 funzionale a conseguire il miglior risultato possibile nell\u2019affidare ed eseguire i contratti. Il principio del risultato costituisce attuazione, nel settore dei contratti pubblici, del principio del buon andamento e dei correlati principi di efficienza, efficacia ed economicit\u00e0. La trasparenza \u00e8 funzionale alla massima semplicit\u00e0 e celarit\u00e0 nella corretta applicazione delle regole del presente decreto, denominato \u00abcodice\u00bb, e ne assicura la piena verificabilit\u00e0.",
+      "prediction": "p"
+    }
+  ]
+}
+{
+  "rouge1": 0.75,
+  "rouge2": 0.0,
+  "rougeL": 0.75,
+  "rougeLsum": 0.75,
+  "R": 0.5,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-16T00:28:04.970687",
+  "model_name": "lvcalucioli/zephyr_outputs",
+  "sample": [
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti perseguono il migliore rapporto tra qualit\u00e0 e prezzo nelle loro procedure di affidamento e esecuzione dei contratti, rispettando i principi di legalit\u00e0, trasparenza e concorrenza. Ci\u00f2 si ottiene attraverso la massima tempestivit\u00e0 nell'esecuzione del contratto e la corretta applicazione delle regole contenute nel codice degli appalti, il quale \u00e8 funzionale alla massima semplicit\u00e0 e celarit\u00e0 nella verificabilit\u00e0 delle procedure. Il principio del risultato, attuato nel settore dei contratti pubblici, contribuisce all'efficienza, efficacia e economicit\u00e0 delle procedure.",
+      "prediction": "t"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti perseguono il miglior risultato possibile nell'affidamento del contratto e della sua esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza. La concorrenza tra gli operatori economici \u00e8 funzionale a conseguire il miglior risultato possibile nell\u2019affidare ed eseguire i contratti. Il principio del risultato costituisce attuazione, nel settore dei contratti pubblici, del principio del buon andamento e dei correlati principi di efficienza, efficacia ed economicit\u00e0. La trasparenza \u00e8 funzionale alla massima semplicit\u00e0 e celarit\u00e0 nella corretta applicazione delle regole del presente decreto, denominato \u00abcodice\u00bb, e ne assicura la piena verificabilit\u00e0.",
+      "prediction": "t"
+    },
+    {
+      "correct_answer": "La trasparenza \u00e8 funzionale alla massima semplicit\u00e0 e celerit\u00e0 nella corretta applicazione delle regole del codice degli appalti pubblici, denominato \u00abcodice\u00bb, e assicura la piena verificabilit\u00e0.",
+      "prediction": "l"
+    }
+  ]
+}
+{
+  "rouge1": 18.43,
+  "rouge2": 8.37,
+  "rougeL": 12.91,
+  "rougeLsum": 15.08,
+  "R": 13.21,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-16T00:34:09.800873",
+  "model_name": "HuggingFaceH4/zephyr-7b-beta",
+  "sample": [
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti nell'affidamento dei contratti pubblici perseguono il risultato dell'affidamento del contratto e della sua esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "Le stazioni appaltanti e gli enti concedenti nell'affidamento dei contratti pubblici sono guidati da principi di trasparenza, obiettivit\u00e0, parit\u00e0 di trattamento, non discriminazione, protezione dei dati personali e buona fede. Questi principi sono enunciati nel Codice degli Appalti Italiani, che \u00e8 l'insieme di norme e regole che disciplinano la procedura di affidamento dei contratti pubblici in Italia. La trasparenza \u00e8 garantita dall'obbligo di pubblicare le informazioni relative ai contratti pubblici, ai criteri di selezione delle offerte e ai risultati delle procedure di affidamento. L'obiettivit\u00e0 richiede che le decisioni di affidamento siano basate su criteri oggettivi e non su considerazioni di favore o di preferenza personale. La parit\u00e0 di trattamento richiede che tutti gli offerenti siano trattati in modo uguale e non vengano discriminati in base a fattori non pertinenti all'affidamento del contratto. La non discriminazione richiede che gli offerenti non siano trattati in modo discriminatorio in base a fattori come la razza, la religione, la nazionalit\u00e0, il sesso, l'et\u00e0, la disabilit\u00e0 o l'orientamento sessuale. La protezione dei dati personali richiede che gli offerenti siano informati delle finalit\u00e0 per cui i loro dati personali sono raccolti e utilizzati e che questi dati siano trattati in conformit\u00e0 con la legge sulla protezione dei dati personali. La buona fede richiede che gli offerenti e gli enti concedenti agiscono con onest\u00e0, integrit\u00e0 e rispetto delle norme e delle regole."
+    },
+    {
+      "correct_answer": "Nel settore dei contratti pubblici, la concorrenza tra gli operatori economici \u00e8 funzionale a conseguire il miglior risultato possibile nell\u2019affidare ed eseguire i contratti, in linea con il principio del risultato e dei correlati principi di efficienza, efficacia ed economicit\u00e0. Essa garantisce la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "Nell'ambito dei contratti pubblici, la concorrenza tra gli operatori economici ha un ruolo fondamentale. L'articolo 117 del Codice degli appalti italiani (Legislative Decree n. 179/2012) afferma infatti che l'obiettivo principale della pubblica amministrazione \u00e8 quello di garantire la massima efficienza economica e la massima qualit\u00e0 dei servizi, attraverso la concorrenza tra gli operatori economici. La concorrenza favorisce la competizione tra le imprese, che si sforzano di offrire servizi e prodotti di alta qualit\u00e0 a prezzi competitivi. Ci\u00f2, a sua volta, porta a una maggiore scelta per la pubblica amministrazione, che pu\u00f2 scegliere tra pi\u00f9 offerte, garantendo una maggiore efficienza e una maggiore qualit\u00e0 dei servizi. Inoltre, la concorrenza favorisce la creazione di nuovi servizi e prodotti, che possono rispondere pi\u00f9 efficacemente alle esigenze della pubblica amministrazione. Ci\u00f2, a sua volta, pu\u00f2 portare a un migliore risultato finale, a prezzi pi\u00f9 competitivi. Tuttavia, la concorrenza non deve essere intesa come una competizione bruta, ma come una competizione equa e regolata. L'articolo 117 del Codice degli appalti italiani prevede infatti la necessit\u00e0 di una procedura di appalto equa e trasparente, che garantisca la massima efficienza economica e la massima qualit\u00e0 dei servizi, senza privilegiare alcun operatore economico. Inoltre, la concorrenza deve essere intesa come una competizione che favorisca la creazione di nuove opportunit\u00e0 di crescita e di innovazione, che possano contribuire alla competitivit\u00e0 dell'economia nazionale. In conclusione, la concorrenza tra gli operatori economici nel settore dei contratti pubblic"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti garantiscono la massima trasparenza nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "Le principi che garantiscono la massima trasparenza nelle stazioni appaltanti e negli enti concedenti sono definiti dal Codice degli Appalti Italiani (CAI) e sono:  1. Pubblicit\u00e0: L'annuncio dell'appalto deve avvenire in modo adeguato e con sufficiente tempo di presentazione delle offerte. 2. Obiettivit\u00e0: Le condizioni dell'appalto devono essere chiare, precise e oggettive, senza pregiudizi o preferenze per un determinato offerente. 3. Parit\u00e0 di trattamento: Tutti gli offerenti devono essere trattati in modo uguale e non devono essere preferiti o trattati in modo diverso a causa di fattori non correlati all'appalto. 4. Trasparenti: Tutte le informazioni relative all'appalto devono essere rese pubbliche, incluse le offerte presentate, le decisioni prese e il risultato finale. 5. Controllo: L'ente concedente deve avere un sistema di controllo adeguato per verificare la corretta applicazione delle norme di trasparenza. 6. Garanzia di rispetto dei diritti: Gli offerenti devono avere la possibilit\u00e0 di presentare reclami e di vedere risolte le controversie in modo equo e trasparente. 7. Riservatezza: Le informazioni sensibili devono essere trattate con riservatezza e non divulgate a terzi senza un motivo legittimo. 8. Coerenza: Le norme di trasparenza devono essere coerenti con le norme internazionali e con le norme applicabili in altri settori dell'economia e della societ\u00e0. 9. Continuit\u00e0: L'ente concedente deve mantenere un sistema di trasparenza continuo e aggiornato, in modo da garantire la massima trasparenza in tutti i momenti. 10. Responsabilit\u00e0: L'ente concedente deve assumere la responsabilit\u00e0 di gar"
+    }
+  ]
+}
+{
+  "rouge1": 7.76,
+  "rouge2": 2.01,
+  "rougeL": 6.38,
+  "rougeLsum": 5.76,
+  "R": 5.38,
+  "gen_len": 1.0,
+  "timestamp": "2024-02-16T00:35:32.557291",
+  "model_name": "lvcalucioli/zephyr_outputs",
+  "sample": [
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti nell'affidamento dei contratti pubblici perseguono il risultato dell'affidamento del contratto e della sua esecuzione con la massima tempestivit\u00e0 e il migliore rapporto possibile tra qualit\u00e0 e prezzo, nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "Economia e finanza pubblica, efficacia e tempestivit\u00e0 dell'esecuzione, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia, correttezza, tempestivit\u00e0, efficacia,"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti garantiscono la massima tempestivit\u00e0 e il migliore rapporto tra qualit\u00e0 e prezzo nelle loro attivit\u00e0 affidando ed eseguendo i contratti rispettando i principi di legalit\u00e0, trasparenza e concorrenza, in funzione della massima semplicit\u00e0 e celarit\u00e0 nella corretta applicazione delle regole del Codice degli Appalti. In particolare, il principio del risultato \u00e8 attuato nel settore dei contratti pubblici, garantendo l'efficienza, l'efficacia ed l'economicit\u00e0, e contribuisce alla piena verificabilit\u00e0 del processo di affidamento e esecuzione dei contratti.",
+      "prediction": "1. Principio di libera concorrenza: ogni operatore economico interessato pu\u00f2 presentare un'offerta in risposta ad un avviso di indizione di gara elettronico o cartaceo, pubblicato da una stazione appaltante o da un ente concedente, senza che siano richiesti alcun tipo di autorizzazione o di preavviso, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi particolari espressamente prevista dalla legge o dal codice di diritto privato o di diritto pubblico applicabile al contratto oggetto dell'appalto, salvo casi partic"
+    },
+    {
+      "correct_answer": "Le stazioni appaltanti e gli enti concedenti garantiscono la massima trasparenza nel rispetto dei principi di legalit\u00e0, trasparenza e concorrenza.",
+      "prediction": "1. Principio di libera concorrenza: ogni operatore economico interessato pu\u00f2 presentare un'offerta in risposta ad un avviso di indizione di gara elettronico o cartaceo, pubblicato da una stazione appaltante o da un ente concedente, senza che siano richiesti preliminariamente alcun tipo di autorizzazione o aggiudicazione preventiva da parte di terzi. 2. Principio di trasparenza: ogni operatore economico interessato pu\u00f2 consultare, in ogni momento, il bando di gara elettronico o cartaceo, pubblicato da una stazione appaltante o da un ente concedente, nonch\u00e9 le offerte presentate da altri operatori economici interessati, senza che siano richiesti preliminariamente alcun tipo di autorizzazione o aggiudicazione preventiva da parte di terzi. 3. Principio di pubblicit\u00e0: ogni operatore economico interessato pu\u00f2 consultare, in ogni momento, le offerte presentate da altri operatori economici interessati, senza che siano richiesti preliminariamente alcun tipo di autorizzazione o aggiudicazione preventiva da parte di terzi. 4. Principio di libera circolazione delle offerte: ogni operatore economico interessato pu\u00f2 consultare, in ogni momento, le offerte presentate da altri operatori economici interessati, senza che siano richiesti preliminariamente alcun tipo di autorizzazione o aggiudicazione preventiva da parte di terzi, salvo che le offerte siano state espressamente contrassegnate come \"confidenziali\" o \"reservate\" o \"non divulgabili\" o \"non pubblicabili\" o \"non consultabili\" o \"non divulgabili senza l'espresso consenso del loro autore\" o \"non consultabili senza l'espresso consenso del loro autore\" o \"non divulgabili senza l'espresso consenso del loro autore\" o \"non consultabili senza l'espresso consenso del loro"
+    }
+  ]
+}

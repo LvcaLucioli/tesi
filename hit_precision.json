@@ -1,0 +1,36 @@
+{
+  "r@1": 0.0,
+  "r@3": 0.0,
+  "r@5": 0.0,
+  "r@10": 0.0,
+  "r@20": 0.0,
+  "timestamp": "2024-02-14T00:03:51.856513",
+  "model_name": "lvcalucioli/ca-finetuned-phi-2"
+}
+{
+  "r@1": 0.0,
+  "r@3": 0.0,
+  "r@5": 0.0,
+  "r@10": 0.0,
+  "r@20": 0.0,
+  "timestamp": "2024-02-14T00:14:57.461064",
+  "model_name": "lvcalucioli/ca-finetuned-phi-2"
+}
+{
+  "r@1": 0.0,
+  "r@3": 0.0,
+  "r@5": 0.0,
+  "r@10": 0.0,
+  "r@20": 0.0,
+  "timestamp": "2024-02-14T02:30:48.727527",
+  "model_name": "lvcalucioli/ca-finetuned-phi-2"
+}
+{
+  "r@1": 0.0,
+  "r@3": 0.0,
+  "r@5": 0.0,
+  "r@10": 0.0,
+  "r@20": 0.0,
+  "timestamp": "2024-02-14T02:38:34.745935",
+  "model_name": "microsoft/phi-2"
+}

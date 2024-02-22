@@ -13,7 +13,7 @@ from transformers import(
     set_seed,
 )
 import re
-from peft import LoraConfig, PeftModel, PeftConfig
+from peft import LoraConfig, PeftModel, PeftConfig, AutoPeftModelForCausalLM
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 from dataclasses import dataclass, field
 from typing import Optional
@@ -171,12 +171,17 @@ def extract_letter(testo):
     match = re.search(r"response:\n\s*\S", testo)
     if match:
         lettera = match.group()[-1]
+        print(lettera)
         return lettera
     else:
+        print("None")
         return ''
 
 def evaluate_multiple_choice(model, tokenizer, dataset):
-    pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_new_tokens=10)
+    pipe = pipeline(task="text-generation", 
+                    model=model,
+                    tokenizer=tokenizer,
+                    max_new_tokens=10)
     result = [pipe(instance) for instance in dataset["test"]["text"]]
     metrics = accuracy_score([b for b in dataset["test"]["answer"]],
                              [extract_letter(a[0]["generated_text"]) for a in result])
@@ -195,7 +200,7 @@ def main():
                         model=model, 
                         tokenizer=tokenizer, 
                         max_new_tokens=122,
-                        # do_sample=True,
+                        do_sample=True,
                         # top_k=finetuning_arguments.top_k,
                         # top_p=finetuning_arguments.top_p,
                         # temperature=finetuning_arguments.temperature,
@@ -204,23 +209,29 @@ def main():
         # for out in pipe(KeyDataset(dataset["test"], "text"), batch_size=8):
         #     print(out[0]["generated_text"])
         #     preds.append(out)
-
+        print("prima")
         processed_preds = []
         i = 0
         for instance in dataset["test"]["text"]:
+            print("for")
             out = pipe(instance)
             out[0]["generated_text"] = out[0]["generated_text"][out[0]["generated_text"].find("### Response:") + len("### Response:"):]
             end_idx = out[0]["generated_text"].find("### Instruction:")
             if end_idx == -1:
-                response = {"generated_text" : out[0]["generated_text"],
-            "id" : dataset["test"]["id"][i]}
+                response = {
+                    "generated_text" : out[0]["generated_text"],
+                    "id" : dataset["test"]["id"][i],
+                    "answer" : dataset["test"]["answer"][i],
+                    "prompt" : dataset["test"]["text"][i]}
             else:
-                response = {"generated_text" : out[0]["generated_text"][: end_idx],
-            "id" : dataset["test"]["id"][i]}
+                response = {
+                    "generated_text" : out[0]["generated_text"][: end_idx],
+                    "id" : dataset["test"]["id"][i],
+                    "answer" : dataset["test"]["answer"][i],
+                    "prompt" : dataset["test"]["text"][i]}
             processed_preds.append(response)
             print(response)
             i = i + 1
-        
         # answers = []
         # i = 0
         # for pred in preds:
@@ -240,30 +251,30 @@ def main():
         with open(f'''generated_text_llamantino_finetuned.json''', 'a') as file:
             json.dump(processed_preds, file, indent=4)
             
-        processed_preds = [pred["generated_text"].strip() for pred in processed_preds]
-        processed_labels = [label.strip() for label in dataset["test"]["answer"]]
+        # processed_preds = [pred["generated_text"].strip() for pred in processed_preds]
+        # processed_labels = [label.strip() for label in dataset["test"]["answer"]]
          
-        processed_preds = ["\n".join(nltk.sent_tokenize(pred)) for pred in processed_preds]
-        processed_labels = ["\n".join(nltk.sent_tokenize(label)) for label in processed_labels]
+        # processed_preds = ["\n".join(nltk.sent_tokenize(pred)) for pred in processed_preds]
+        # processed_labels = ["\n".join(nltk.sent_tokenize(label)) for label in processed_labels]
         
-        result = metric_rouge.compute(predictions=processed_preds, references=processed_labels, use_stemmer=True)
-        result = {k: round(v * 100, 2) for k, v in result.items()}
+        # result = metric_rouge.compute(predictions=processed_preds, references=processed_labels, use_stemmer=True)
+        # result = {k: round(v * 100, 2) for k, v in result.items()}
         
-        result["R"] = round(np.mean([result["rouge1"], result["rouge2"], result["rougeL"]]) / \
-                    (1 + (np.var([result["rouge1"]/100, result["rouge2"]/100, result["rougeL"]/100]))), 2)
+        # result["R"] = round(np.mean([result["rouge1"], result["rouge2"], result["rougeL"]]) / \
+        #             (1 + (np.var([result["rouge1"]/100, result["rouge2"]/100, result["rougeL"]/100]))), 2)
 
-        processed_preds = [pred.replace("\n", " ") for pred in processed_preds]
-        processed_labels = [label.replace("\n", " ") for label in processed_labels]
+        # processed_preds = [pred.replace("\n", " ") for pred in processed_preds]
+        # processed_labels = [label.replace("\n", " ") for label in processed_labels]
 
-        result["gen_len"] = np.mean([np.count_nonzero(pred != tokenizer.pad_token_id) for pred in processed_preds])
+        # result["gen_len"] = np.mean([np.count_nonzero(pred != tokenizer.pad_token_id) for pred in processed_preds])
         
-        result["model_name"] = model_name
-        result["datetime"] = datetime.now().isoformat()
+        # result["model_name"] = model_name
+        # result["datetime"] = datetime.now().isoformat()
 
-        with open('rouge_result.json', 'a') as file:
-            json.dump(result, file, indent=4)
+        # with open('rouge_result.json', 'a') as file:
+        #     json.dump(result, file, indent=4)
         
-        return result
+        # return result
     if finetuning_arguments.training_task == "syntetic-question-answering":
         train_dataset = Dataset.from_pandas(load_syntetic_dataset(finetuning_arguments.first_n))
         test_dataset = Dataset.from_pandas(load_qna_dataset(finetuning_arguments.first_n/10))
@@ -290,20 +301,23 @@ def main():
         bnb_4bit_compute_dtype=torch.bfloat16,
     )
     
-    # model = AutoModelForCausalLM.from_pretrained(
-    #     finetuning_arguments.model_name,
-    #     quantization_config=bnb_config,
-    #     device_map={"": 0}
-    # )
-    # model.config.use_cache = False
-    # model.config.pretraining_tp = 1
+    model = AutoModelForCausalLM.from_pretrained(
+        finetuning_arguments.model_name,
+        quantization_config=bnb_config,
+        device_map={"": 0}
+    )
+    model.config.use_cache = False
+    model.config.pretraining_tp = 1
     
-    model = AutoModelForCausalLM.from_pretrained(finetuning_arguments.model_name)
-    model = PeftModel.from_pretrained(model, finetuning_arguments.new_model_name)
+    # Load model directly
+
+    # tokenizer = AutoTokenizer.from_pretrained("llamantino7b_2_question-answering_merged")
+    # model = AutoModelForCausalLM.from_pretrained("llamantino7b_2_question-answering_merged")
     
     tokenizer = AutoTokenizer.from_pretrained(finetuning_arguments.model_name, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
+    
     
     if finetuning_arguments.training_task == "multiple-choice":
         print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
@@ -342,7 +356,7 @@ def main():
         max_steps=-1,
         warmup_ratio=0.03,
         group_by_length=True,
-        lr_scheduler_type="constant",
+        lr_scheduler_type="cosine",
         report_to="wandb",
         gradient_checkpointing=True,
         # load_best_model_at_end=True,
@@ -369,11 +383,21 @@ def main():
     
     # trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     
-    # model = PeftModel.from_pretrained(model, f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    
+    # peft_model = PeftModel.from_pretrained(model, f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    
+    # merged_model = peft_model.merge_and_unload()
+    
+    # merged_model.save_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged''')
+    
+    # merged_model.push_to_hub(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged''')   
+    
+    # trainer.tokenizer.push_to_hub(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged''')   
 
-    # tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    # tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged''')
+    
     # if finetuning_arguments.training_task == "multiple-choice":
-    #     print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
+    #     print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(merged_model, tokenizer, dataset)}''')
     # else:
     #     print(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset,
     #           finetuning_arguments.new_model_name + '_' + finetuning_arguments.training_task)}''')
