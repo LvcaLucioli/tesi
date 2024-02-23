@@ -14,4 +14,20 @@
     "R": 5.72,
     "model_name": "HuggingFaceH4/zephyr-7b-beta",
     "datetime": "2024-02-23T01:44:53.333872"
+}{
+    "rouge1": 2.19,
+    "rouge2": 0.07,
+    "rougeL": 2.06,
+    "rougeLsum": 2.06,
+    "R": 1.44,
+    "model_name": "lvcalucioli/phi2_question-answering_merged",
+    "datetime": "2024-02-23T03:32:05.282013"
+}{
+    "rouge1": 1.94,
+    "rouge2": 0.43,
+    "rougeL": 1.69,
+    "rougeLsum": 1.82,
+    "R": 1.35,
+    "model_name": "microsoft/phi-2",
+    "datetime": "2024-02-23T03:44:38.949548"
 }

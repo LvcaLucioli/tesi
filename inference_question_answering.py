@@ -42,6 +42,9 @@ class PredictionArguments:
     end_prediction: Optional[str] = field(
         default=None, metadata={'help' : 'where the prediction ends'}
     )
+    max_new_tokens: Optional[int] = field(
+        default=None, metadata={'help' : 'max_new_tokens'}
+    )
 
 def load_qna_dataset():
     path = "datasets/CdA-mininterno-quiz_dataset.csv"
@@ -57,11 +60,18 @@ def load_qna_dataset():
           
     new_dataset = []
     for _, qa in df.iterrows():
-        inputs = {
-            "text" : f'''<|system|>\nAnalizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s>\n<|user|>\n{qa["question"]}</s>\n<|assistant|>\n{qa["answer"]}''',
-            "answer" : qa["answer"],
-            "id" : qa["id"],
-            }
+        if "zephyr" in generation_arguments.model_name:
+            inputs = {
+                "text" : f'''<|system|>\nAnalizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s>\n<|user|>\n{qa["question"]}</s>\n<|assistant|>\n''',
+                "answer" : qa["answer"],
+                "id" : qa["id"],
+                }
+        elif "phi" in generation_arguments.model_name:
+            inputs = {
+                "text" : f'''"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\Question: {qa["question"]}\nOutput:''',     
+                "answer" : qa["answer"],
+                "id" : qa["id"],
+                }
         new_dataset.append(inputs)
 
     return pd.DataFrame(new_dataset)
@@ -69,18 +79,41 @@ def load_qna_dataset():
 parser = HfArgumentParser((PredictionArguments))
 generation_arguments  = parser.parse_args_into_dataclasses()[0]
 
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_use_double_quant=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16,
-)
+if "lvcalucioli" in generation_arguments.model_name:
+    bnb_config = None
+else: 
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+    )
 
-model = AutoModelForCausalLM.from_pretrained(
-    generation_arguments.model_name,
-    quantization_config=bnb_config,
-    device_map={"": 0}
-)
+if "microsoft" in generation_arguments.model_name:
+    model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                            trust_remote_code=True,
+                                            quantization_config = bnb_config,
+                                            flash_attn = True,
+                                            flash_rotary = True,
+                                            fused_dense = True,
+                                            low_cpu_mem_usage = True,
+                                            device_map={"":0},
+                                            revision="refs/pr/23")
+elif "lvcalucioli/phi" in generation_arguments.model_name:
+    model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                                trust_remote_code=True,
+                                                device_map={"":0},
+                                                # flash_attn = True,
+                                                # flash_rotary = True,
+                                                # fused_dense = True,
+                                                low_cpu_mem_usage = True,)
+
+elif "zephyr" in generation_arguments.model_name:
+    model = AutoModelForCausalLM.from_pretrained(
+        generation_arguments.model_name,
+        quantization_config=bnb_config,
+        device_map={"": 0}
+    )
 
 model.config.use_cache = False
 model.config.pretraining_tp = 1
@@ -93,13 +126,14 @@ tokenizer.padding_side = "right"
 def generate_preds(dataset):
     pipe = pipeline(task="text-generation", 
                         model=model, 
+                        trust_remote_code=True,
                         tokenizer=tokenizer,
-                        max_new_tokens=123,
-                        do_sample=True,
-                        top_k=generation_arguments.top_k,
-                        top_p=generation_arguments.top_p,
-                        temperature=generation_arguments.temperature,
-                        num_beams=generation_arguments.num_beams,
+                        max_new_tokens=generation_arguments.max_new_tokens, #123
+                        # do_sample=True,
+                        # top_k=generation_arguments.top_k,
+                        # top_p=generation_arguments.top_p,
+                        # temperature=generation_arguments.temperature,
+                        # num_beams=generation_arguments.num_beams,
                         pad_token_id=tokenizer.eos_token_id
                         
         )

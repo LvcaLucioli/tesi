@@ -1,0 +1,10 @@
+{
+    "datetime": "2024-02-23T02:48:52.686940",
+    "model_name": "phi2",
+    "layers": [
+        "fc1",
+        "out_proj",
+        "Wqkv",
+        "fc2"
+    ]
+}
