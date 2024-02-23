@@ -14,7 +14,7 @@ from transformers import (
     AutoModel,
     pipeline,
     set_seed,
-    AutoPeftModelForCausalLM
+    
 )
 from sklearn.metrics import accuracy_score
 from trl import DataCollatorForCompletionOnlyLM, SFTTrainer
@@ -41,7 +41,8 @@ from peft import (
     LoraConfig,
     prepare_model_for_kbit_training,
     get_peft_model,
-    PeftModel
+    PeftModel,
+    AutoPeftModelForCausalLM
 )
 
 @dataclass
@@ -88,7 +89,7 @@ class PredictionArguments:
     
    
 def load_qna_dataset(n):
-    path = "CdA-mininterno-quiz_dataset.csv"
+    path = "./datasets/CdA-mininterno-quiz_dataset.csv"
     df = pd.read_csv(path)
     
     df = df.drop(columns=['Tipo-Domanda'])
@@ -103,7 +104,7 @@ def load_qna_dataset(n):
     new_dataset = []
     for _, qa in df.iterrows():
         inputs = {
-            "text" : f'''"<|system|> Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s> <|user|> {qa["question"]}\n</s> <|assistant|> ''',     
+            "text" : f'''<|system|>\nAnalizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s>\n<|user|>\n{qa["question"]}</s>\n<|assistant|>\n{qa["answer"]}''',
             "answer" : qa["answer"],
             "id" : qa["id"],
             }
@@ -131,8 +132,8 @@ def load_syntetic_dataset(n):
     new_dataset = []
     for _, qa in df.iterrows():
         inputs = {
-            "text" : f'''"<|system|> Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s> <|user|> {qa["question"]}\n</s> <|assistant|> ''',     
-            "answer" : f'''{qa["answer"]}''',
+            "text" : f'''"<|system|>\nAnalizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.</s>\n<|user|>\n{qa["question"]}</s>\n<|assistant|>\n{qa["answer"]}''',     
+            "answer" : qa["answer"],
             }
         new_dataset.append(inputs)
     if n == 0:
@@ -171,9 +172,6 @@ def find_all_linear_names(model):
         if isinstance(module, cls):
             names = name.split('.')
             lora_module_names.add(names[0] if len(names) == 1 else names[-1])
-
-    if 'lm_head' in lora_module_names:
-        lora_module_names.remove('lm_head')
     return list(lora_module_names)
 
 def extract_letter(testo):
@@ -264,7 +262,7 @@ def main():
                         model=model, 
                         tokenizer=tokenizer,
                         max_new_tokens=123,
-                        # do_sample=True,
+                        do_sample=True,
                         # top_k=finetuning_arguments.top_k,
                         # top_p=finetuning_arguments.top_p,
                         # temperature=finetuning_arguments.temperature,
@@ -329,7 +327,7 @@ def main():
 
         result["datetime"] = datetime.now().isoformat()
         
-        with open('rouge_result.json', 'a') as file:
+        with open('result/rouge_result.json', 'a') as file:
             json.dump(result, file, indent=4)
         
         return result 
@@ -340,13 +338,12 @@ def main():
         dataset = load_mutliple_choice_dataset(finetuning_arguments.first_n)
     elif finetuning_arguments.training_task == "question-answering":
         dataset = load_qna_dataset(finetuning_arguments.first_n)
-    
 
     
     dataset = Dataset.from_dict(dataset.to_dict(orient='list'))
     dataset = dataset.train_test_split(test_size=0.2)
 
-    dataset["train"] = dataset["train"].map(lambda examples: {"text" : [text + ' ' + answer + '</s>' for text, answer in zip(examples["text"], examples["answer"])]}, batched=True)
+    # dataset["train"] = dataset["train"].map(lambda examples: {"text" : [text + ' ' + answer + '</s>' for text, answer in zip(examples["text"], examples["answer"])]}, batched=True)
     
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -358,9 +355,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         finetuning_arguments.model_name,
         quantization_config=bnb_config,
-
         device_map="cuda:0",
-        use_cache=False
     )
 
     tokenizer = AutoTokenizer.from_pretrained(finetuning_arguments.model_name, trust_remote_code=True)
@@ -368,24 +363,25 @@ def main():
     tokenizer.padding_side="left"
     model.config.pad_token_id = model.config.eos_token_id
                 
-    if finetuning_arguments.training_task == "multiple-choice":
-        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
-    else:
-        print(dataset["test"])
-        print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset,
-              finetuning_arguments.new_model_name + '_' + finetuning_arguments.training_task)}''')
+    # if finetuning_arguments.training_task == "multiple-choice":
+    #     print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_multiple_choice(model, tokenizer, dataset)}''')
+    # else:
+    #     print(dataset["test"])
+    #     print(f'''{finetuning_arguments.model_name}_{finetuning_arguments.training_task}: {evaluate_question_answering(dataset,
+    #           finetuning_arguments.new_model_name + '_' + finetuning_arguments.training_task)}''')
     
 
     model.config.use_cache = False
+    model.config.pretraining_tp=1
     model.gradient_checkpointing_enable()
-    model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
+    model = prepare_model_for_kbit_training(model)
 
-    # modules = find_all_linear_names(model)
+    print(f'''linear layers: {find_all_linear_names(model)}''')
 
     peft_config = LoraConfig(
         lora_alpha=16,
         lora_dropout=0.1,
-        # target_modules=modules,
+        target_modules=['v_proj', 'o_proj', 'k_proj', 'q_proj', 'lm_head'],
         r=8,
         bias="none",
         task_type="CAUSAL_LM"
@@ -406,7 +402,7 @@ def main():
         # warmup_steps=5,
         fp16=True,
         logging_strategy="epoch",
-        lr_scheduler_type="constant",
+        lr_scheduler_type="cosine",
         # evaluation_strategy="epoch",
         # logging_steps=1,
         # save_strategy="steps",
@@ -420,8 +416,8 @@ def main():
         # load_best_model_at_end=True
     )
 
-    response_template = '<|assistant|>'
-    trainer = Trainer(
+    response_template = '\n<|assistant|>\n'
+    trainer = SFTTrainer(
         model=model,
         args=training_args,
         data_collator=DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer),
@@ -441,7 +437,6 @@ def main():
     
     trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     
-    
     peft_model = AutoPeftModelForCausalLM.from_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
 
     merged_model = peft_model.merge_and_unload() 
@@ -450,6 +445,10 @@ def main():
     
     merged_model.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
     tokenizer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    
+    merged_model.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    tokenizer.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    
     # model = AutoModelForCausalLM.from_pretrained(finetuning_arguments.model_name)
     # finetuned_model = PeftModel.from_pretrained(model, f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''').to("cuda:0")
     

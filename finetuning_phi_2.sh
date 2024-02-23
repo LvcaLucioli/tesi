@@ -4,8 +4,8 @@ CUDA_VISIBLE_DEVICES=2 python3 phi_supervised_finetuning.py \
     --new_model_name "phi2" \
     --first_n 0 \
     --num_train_epochs 12 \
-    --per_device_eval_batch_size 1 \
-    --per_device_train_batch_size 1 \
+    --per_device_eval_batch_size 4 \
+    --per_device_train_batch_size 4 \
     --learning_rate 2e-4 \
     --sample 1 \
     --training_task "question-answering" \
