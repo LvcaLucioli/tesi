@@ -7,4 +7,49 @@
         "Wqkv",
         "fc2"
     ]
+}{
+    "datetime": "2024-02-23T13:09:40.250390",
+    "model_name": "phi2",
+    "layers": [
+        "fc1",
+        "fc2",
+        "out_proj",
+        "Wqkv"
+    ]
+}{
+    "datetime": "2024-02-23T13:33:16.868926",
+    "model_name": "phi2",
+    "layers": [
+        "out_proj",
+        "fc1",
+        "fc2",
+        "Wqkv"
+    ]
+}{
+    "datetime": "2024-02-23T17:25:54.274119",
+    "model_name": "phi2",
+    "layers": [
+        "fc2",
+        "out_proj",
+        "Wqkv",
+        "fc1"
+    ]
+}{
+    "datetime": "2024-02-23T18:36:34.596895",
+    "model_name": "phi2_okq",
+    "layers": [
+        "Wqkv",
+        "fc1",
+        "out_proj",
+        "fc2"
+    ]
+}{
+    "datetime": "2024-02-23T19:20:12.522241",
+    "model_name": "phi2_linear",
+    "layers": [
+        "out_proj",
+        "fc1",
+        "Wqkv",
+        "fc2"
+    ]
 }

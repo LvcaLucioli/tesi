@@ -1,0 +1,25 @@
+{
+    "accuracy score": 0.15384615384615385,
+    "model_name": "microsoft/phi-2",
+    "datetime": "2024-02-23T16:45:01.036557"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_multiple-choice_merged",
+    "datetime": "2024-02-23T17:57:06.472790"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_question-answering_merged",
+    "datetime": "2024-02-23T18:04:09.992916"
+}{
+    "accuracy score": 0.15384615384615385,
+    "model_name": "microsoft/phi-2",
+    "datetime": "2024-02-23T18:08:21.805685"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_okq_multiple-choice_merged",
+    "datetime": "2024-02-23T18:47:31.983032"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_linear_multiple-choice_merged",
+    "datetime": "2024-02-23T19:47:12.347577"
+}
