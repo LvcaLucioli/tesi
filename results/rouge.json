@@ -1,0 +1,17 @@
+{
+    "rouge1": 10.59,
+    "rouge2": 5.4,
+    "rougeL": 9.41,
+    "rougeLsum": 9.61,
+    "R": 8.46,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_merged",
+    "datetime": "2024-02-23T01:42:16.864755"
+}{
+    "rouge1": 8.59,
+    "rouge2": 1.52,
+    "rougeL": 7.07,
+    "rougeLsum": 7.3,
+    "R": 5.72,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-23T01:44:53.333872"
+}

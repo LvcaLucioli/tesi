@@ -13,14 +13,16 @@ import json
 from datetime import datetime
 
 @dataclass
-class FinetuneArguments:
+class EvaluationArguments:
     model_name: Optional[str] = field(
         default=None, metadata={"help" : "The name of the model."}
+    )
+    predictions_path: Optional[str] = field(
+        default=None, metadata={'help' : 'predictions path'}
     )
     
 def r_at_k(collection, embeddings, ids, k):
         score = 0
-        step = 0
 
         for pred, id in zip(embeddings, ids):
             results = collection.query(
@@ -30,15 +32,14 @@ def r_at_k(collection, embeddings, ids, k):
             )
             if str(id) in results["ids"][0]:
                 score += 1
-            step += 1
         return (score / len(ids))
 
 
 def main():
         set_seed(42)
 
-        parser = HfArgumentParser((FinetuneArguments))
-        finetuning_arguments  = parser.parse_args_into_dataclasses()[0]
+        parser = HfArgumentParser((EvaluationArguments))
+        evaluation_arguments  = parser.parse_args_into_dataclasses()[0]
     
         client = chromadb.PersistentClient(path="chroma_data/")
         model = AutoModel.from_pretrained("dlicari/lsg16k-Italian-Legal-BERT", trust_remote_code=True).to("cuda:0")
@@ -50,7 +51,7 @@ def main():
             )
         
         
-        with open(f'''generated_text_{finetuning_arguments.model_name}.json''', 'r') as file:
+        with open(evaluation_arguments.predictions_path, 'r') as file:
             data = json.load(file)
         
         generated_texts = []
@@ -91,16 +92,16 @@ def main():
         result["r@20"] = r_at_k(collection, embeddings, result_dict["id"], 20)
         result["r@50"] = r_at_k(collection, embeddings, result_dict["id"], 50)
         
-        result["model_name"] = finetuning_arguments.model_name
-        # result["temperature"] = finetuning_arguments.temperature
-        # result["top_p"] = finetuning_arguments.top_p
-        # result["top_k"] = finetuning_arguments.top_k
-        # result["num_beams"] = finetuning_arguments.num_beams
-        # result["task"] = finetuning_arguments.training_task
+        result["model_name"] = evaluation_arguments.model_name
+        # result["temperature"] = evaluation_arguments.temperature
+        # result["top_p"] = evaluation_arguments.top_p
+        # result["top_k"] = evaluation_arguments.top_k
+        # result["num_beams"] = evaluation_arguments.num_beams
+        # result["task"] = evaluation_arguments.training_task
         result["datetime"] = datetime.now().isoformat()
         
-        # with open('result.json', 'a') as file:
-        #     json.dump(result, file, indent=4)
+        with open('./results/r@k.json', 'a') as file:
+            json.dump(result, file, indent=4)
     
         print(result)
 
