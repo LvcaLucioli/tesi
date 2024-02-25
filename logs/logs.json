@@ -52,4 +52,49 @@
         "Wqkv",
         "fc2"
     ]
+}{
+    "datetime": "2024-02-24T11:06:03.367860",
+    "model_name": "phi2_linear",
+    "layers": [
+        "Wqkv",
+        "out_proj",
+        "fc2",
+        "fc1"
+    ]
+}{
+    "datetime": "2024-02-24T18:59:00.405117",
+    "model_name": "phi2_linear",
+    "layers": [
+        "out_proj",
+        "Wqkv",
+        "fc1",
+        "fc2"
+    ]
+}{
+    "datetime": "2024-02-24T20:24:36.579564",
+    "model_name": "llamantino7b_2",
+    "layers": [
+        "o_proj",
+        "k_proj",
+        "down_proj",
+        "q_proj",
+        "v_proj",
+        "up_proj",
+        "gate_proj"
+    ]
+}{
+    "datetime": "2024-02-25T02:23:19.035673",
+    "model_name": "flan-t5-large_"
+}{
+    "datetime": "2024-02-25T02:32:10.349385",
+    "model_name": "flan-t5-large_"
+}{
+    "datetime": "2024-02-25T02:38:05.511036",
+    "model_name": "flan-t5-large_"
+}{
+    "datetime": "2024-02-25T02:48:54.081421",
+    "model_name": "flan-t5-large_"
+}{
+    "datetime": "2024-02-25T03:44:20.176612",
+    "model_name": "flan-t5-large_"
 }

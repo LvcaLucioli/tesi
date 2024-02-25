@@ -222,4 +222,204 @@
     "R": 2.19,
     "model_name": "microsoft/phi-2",
     "datetime": "2024-02-23T15:31:12.562624"
+}{
+    "rouge1": 2.2,
+    "rouge2": 0.0,
+    "rougeL": 2.04,
+    "rougeLsum": 2.06,
+    "R": 1.41,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T11:32:22.426621"
+}{
+    "rouge1": 2.17,
+    "rouge2": 0.0,
+    "rougeL": 2.07,
+    "rougeLsum": 2.05,
+    "R": 1.41,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T11:35:14.427627"
+}{
+    "rouge1": 2.17,
+    "rouge2": 0.0,
+    "rougeL": 2.08,
+    "rougeLsum": 2.08,
+    "R": 1.42,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T11:40:33.711056"
+}{
+    "rouge1": 2.22,
+    "rouge2": 0.0,
+    "rougeL": 2.02,
+    "rougeLsum": 2.0,
+    "R": 1.41,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T11:43:43.148382"
+}{
+    "rouge1": 2.38,
+    "rouge2": 0.12,
+    "rougeL": 2.2,
+    "rougeLsum": 2.19,
+    "R": 1.57,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T19:25:55.534562"
+}{
+    "rouge1": 2.42,
+    "rouge2": 0.17,
+    "rougeL": 2.27,
+    "rougeLsum": 2.26,
+    "R": 1.62,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T19:30:13.246914"
+}{
+    "rouge1": 2.46,
+    "rouge2": 0.17,
+    "rougeL": 2.31,
+    "rougeLsum": 2.32,
+    "R": 1.65,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T19:30:24.159204"
+}{
+    "rouge1": 2.44,
+    "rouge2": 0.17,
+    "rougeL": 2.31,
+    "rougeLsum": 2.28,
+    "R": 1.64,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-24T19:30:39.889547"
+}{
+    "rouge1": 4.05,
+    "rouge2": 1.18,
+    "rougeL": 3.72,
+    "rougeLsum": 3.81,
+    "R": 2.98,
+    "model_name": "swap-uniba/LLaMAntino-2-7b-hf-ITA",
+    "datetime": "2024-02-24T20:51:29.239543"
+}{
+    "rouge1": 4.44,
+    "rouge2": 1.12,
+    "rougeL": 4.11,
+    "rougeLsum": 4.14,
+    "R": 3.22,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-24T20:51:36.439808"
+}{
+    "rouge1": 4.61,
+    "rouge2": 1.07,
+    "rougeL": 4.16,
+    "rougeLsum": 4.27,
+    "R": 3.28,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-24T20:56:11.959751"
+}{
+    "rouge1": 4.35,
+    "rouge2": 1.09,
+    "rougeL": 3.88,
+    "rougeLsum": 3.96,
+    "R": 3.11,
+    "model_name": "swap-uniba/LLaMAntino-2-7b-hf-ITA",
+    "datetime": "2024-02-24T21:03:37.131711"
+}{
+    "rouge1": 3.71,
+    "rouge2": 0.77,
+    "rougeL": 3.35,
+    "rougeLsum": 3.37,
+    "R": 2.61,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-24T21:03:41.381342"
+}{
+    "rouge1": 1.67,
+    "rouge2": 0.22,
+    "rougeL": 1.5,
+    "rougeLsum": 1.63,
+    "R": 1.13,
+    "model_name": "swap-uniba/LLaMAntino-2-7b-hf-ITA",
+    "datetime": "2024-02-24T21:12:22.039747"
+}{
+    "rouge1": 1.51,
+    "rouge2": 0.16,
+    "rougeL": 1.36,
+    "rougeLsum": 1.48,
+    "R": 1.01,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-24T21:12:26.437148"
+}{
+    "rouge1": 6.82,
+    "rouge2": 1.42,
+    "rougeL": 6.2,
+    "rougeLsum": 6.16,
+    "R": 4.81,
+    "model_name": "lvcalucioli/flan-t5-large__question-answering",
+    "datetime": "2024-02-25T03:03:02.050105"
+}{
+    "rouge1": 8.22,
+    "rouge2": 1.14,
+    "rougeL": 7.26,
+    "rougeLsum": 7.38,
+    "R": 5.53,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-25T03:13:41.064912"
+}{
+    "rouge1": 7.0,
+    "rouge2": 1.39,
+    "rougeL": 6.06,
+    "rougeLsum": 6.09,
+    "R": 4.81,
+    "model_name": "lvcalucioli/flan-t5-large__question-answering",
+    "datetime": "2024-02-25T03:14:19.502233"
+}{
+    "rouge1": 8.22,
+    "rouge2": 1.11,
+    "rougeL": 7.29,
+    "rougeLsum": 7.52,
+    "R": 5.53,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-25T03:14:27.109493"
+}{
+    "rouge1": 6.94,
+    "rouge2": 1.45,
+    "rougeL": 6.04,
+    "rougeLsum": 6.06,
+    "R": 4.81,
+    "model_name": "lvcalucioli/flan-t5-large__question-answering",
+    "datetime": "2024-02-25T03:18:10.154009"
+}{
+    "rouge1": 7.37,
+    "rouge2": 1.16,
+    "rougeL": 6.56,
+    "rougeLsum": 6.73,
+    "R": 5.03,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-25T03:18:14.325236"
+}{
+    "rouge1": 6.97,
+    "rouge2": 1.5,
+    "rougeL": 6.03,
+    "rougeLsum": 6.05,
+    "R": 4.83,
+    "model_name": "lvcalucioli/flan-t5-large__question-answering",
+    "datetime": "2024-02-25T03:23:54.570995"
+}{
+    "rouge1": 7.43,
+    "rouge2": 1.11,
+    "rougeL": 6.52,
+    "rougeLsum": 6.68,
+    "R": 5.02,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-25T03:24:01.908600"
+}{
+    "rouge1": 17.33,
+    "rouge2": 10.51,
+    "rougeL": 16.49,
+    "rougeLsum": 16.64,
+    "R": 14.76,
+    "model_name": "lvcalucioli/flan-t5-large__question-answering",
+    "datetime": "2024-02-25T03:51:31.631368"
+}{
+    "rouge1": 8.14,
+    "rouge2": 1.26,
+    "rougeL": 7.12,
+    "rougeLsum": 7.39,
+    "R": 5.5,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-25T04:01:09.881785"
 }
