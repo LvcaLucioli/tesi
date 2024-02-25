@@ -13,11 +13,12 @@ from transformers import (
   TrainingArguments,
   HfArgumentParser,
 )
-
+from datasets import Dataset
 from typing import Optional
 from dataclasses import dataclass, field
 import torch
 from datetime import datetime
+import pandas as pd
 import json
 from datasets import load_from_disk
 
@@ -61,19 +62,29 @@ retrieval_encoder = DPRQuestionEncoder.from_pretrained(finetuning_arguments.enco
 generator_tokenizer = T5Tokenizer.from_pretrained(finetuning_arguments.generator_model_name)
 generator_encoder = T5ForConditionalGeneration.from_pretrained(finetuning_arguments.generator_model_name)
 
+def load_qna_dataset():
+    path = "./datasets/CdA-mininterno-quiz_dataset.csv"
+    df = pd.read_csv(path)
+    
+    df = df.drop(columns=['Tipo-Domanda'])
+    
+    df = df.rename(columns={
+    'Domanda': 'question',
+    'Risposta': 'answer',
+    'Id' : 'id',
+    })
 
+    new_dataset = []
+    for _, qa in df.iterrows():
+        inputs = {
+            "question" : qa["question"],      
+            "answer" : qa["answer"],
+            "id" : qa["id"],
+            }
+        new_dataset.append(inputs)
+    return pd.DataFrame(new_dataset)
 
-
-
-
-
-
-
-
-
-
-
-
+   
 # outputs = model(input_ids=...)
 
 # doc_ids = outputs.retrieved_doc_ids[0].tolist()     # indices of retrieved documents in the database
@@ -121,8 +132,8 @@ def main():
     training_args = TrainingArguments(
         output_dir="./rag_finetuned/",
         num_train_epochs=3,
-        per_device_train_batch_size=4,
-        per_device_eval_batch_size=4,
+        per_device_train_batch_size=1,
+        per_device_eval_batch_size=1,
         warmup_steps=500,
         weight_decay=0.01,
         logging_dir="./logs/",
@@ -135,40 +146,56 @@ def main():
     'padding' : 'max_length',
     'truncation' : True
     }
-    print(dataset)
+    pair_dataset = load_qna_dataset()
+    pair_dataset = Dataset.from_dict(pair_dataset.to_dict(orient='list'))
+    
+    print(pair_dataset["question"][0])
+    input = retrieval_tokenizer(pair_dataset["question"][0], **tok_config).input_ids
+    outputs = model.generate(input)
+    print(generator_tokenizer.decode(outputs[0], skip_special_tokens=True))
+    # doc_ids = outputs.retrieved_doc_ids[0].tolist()     # indices of retrieved documents in the database
+    # doc_scores = outputs.doc_scores[0].tolist()         # similarity scores between document and question
+
+    # for doc_i, sc in zip(doc_ids, doc_scores):
+    #     print('-'*50)
+    #     print(round(sc,2), repr(dataset['text'][doc_i]))
+    
+    
 
     # Define a function to process the data for training
     def preprocess_function(examples):
-        inputs = []
-        for title, text in  zip(examples["title"], examples["text"]):
-            print(title + text)
-            inputs.append(title + retrieval_tokenizer.sep_token + text)
-        
-        model_inputs = retrieval_tokenizer(inputs, **tok_config)
+        model_inputs = retrieval_tokenizer(examples["question"],
+                                           **tok_config,)
         # Prepare labels
-        labels = generator_tokenizer(examples["answer"], max_length=512, truncation=True)
+        labels = generator_tokenizer(examples["answer"],
+                                     max_length=512,
+                                     truncation=True).input_ids
         
-        model_inputs["labels"] = labels["input_ids"]
+        model_inputs["labels"] = labels
+        
         return model_inputs
 
-    tokenized_datasets = dataset.map(preprocess_function, 
+    tokenized_datasets = pair_dataset.map(preprocess_function, 
                                  batched=True, 
-                                 remove_columns=dataset.column_names)
-
+                                 remove_columns=pair_dataset.column_names)
     # Split dataset into train, validation and test
     # ...
-
+    
+    tokenized_datasets = tokenized_datasets.train_test_split(test_size=0.3)
+    
     # Initialize the Trainer
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=tokenized_datasets["train"],
-        eval_dataset=tokenized_datasets["validation"],
+        eval_dataset=tokenized_datasets["test"],
     )
     
     # Start fine-tuning
     trainer.train() 
     
+    
+
     trainer.push_to_hub("lvcalucioli/retriever")
 
 if __name__ == "__main__":main()

@@ -20,6 +20,9 @@ class EvaluationArguments:
     predictions_path: Optional[str] = field(
         default=None, metadata={'help' : 'predictions path'}
     )
+    encoder_name: Optional[str] = field(
+        default=None, metadata={'help' : 'encoder model name'}
+    )
     
 def r_at_k(collection, embeddings, ids, k):
         score = 0
@@ -42,11 +45,18 @@ def main():
         evaluation_arguments  = parser.parse_args_into_dataclasses()[0]
     
         client = chromadb.PersistentClient(path="chroma_data/")
-        model = AutoModel.from_pretrained("dlicari/lsg16k-Italian-Legal-BERT", trust_remote_code=True).to("cuda:0")
-        tokenizer = AutoTokenizer.from_pretrained("dlicari/lsg16k-Italian-Legal-BERT", trust_remote_code=True)
+        tokenizer = AutoTokenizer.from_pretrained(evaluation_arguments.encoder_name, trust_remote_code=True)
+        model = AutoModel.from_pretrained(evaluation_arguments.encoder_name, trust_remote_code=True).to("cuda:0")
+
         tokenizer.pad_token_id = tokenizer.eos_token_id = 2
         model.config.pad_token_id = model.config.eos_token_id
-        collection = client.get_collection(
+        if "bge" in evaluation_arguments.encoder_name:
+            
+            collection = client.get_collection(
+                    name="answer_embeddings_bge_1",
+                )
+        else:
+            collection = client.get_collection(
                 name="answer_embeddings_definitivo",
             )
         

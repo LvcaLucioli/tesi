@@ -5,6 +5,7 @@ from transformers import (
     HfArgumentParser,
     set_seed,
     pipeline,  
+    AutoModelForSeq2SeqLM,
 )
 from datasets import Dataset
 import json
@@ -68,7 +69,19 @@ def load_qna_dataset():
                 }
         elif "phi" in generation_arguments.model_name:
             inputs = {
-                "text" : f'''"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\Question: {qa["question"]}\nOutput:''',     
+                "text" : f'''"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: {qa["question"]}\nOutput:''',     
+                "answer" : qa["answer"],
+                "id" : qa["id"],
+                }
+        elif "ntino" in generation_arguments.model_name:
+            inputs = {
+                "text" : f'''"<s>[INST] <<SYS>>\nAnalizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano.\n<</SYS>>\n\n{qa["question"]} [/INST] ''',      
+                "answer" : qa["answer"],
+                "id" : qa["id"],
+                }
+        elif "flan" in generation_arguments.model_name:
+            inputs = {
+                "text" : f'''\n\nDomanda: {qa["question"]}\n\nRisposta: ''',
                 "answer" : qa["answer"],
                 "id" : qa["id"],
                 }
@@ -108,12 +121,29 @@ elif "lvcalucioli/phi" in generation_arguments.model_name:
                                                 # fused_dense = True,
                                                 low_cpu_mem_usage = True,)
 
-elif "zephyr" in generation_arguments.model_name:
+elif "HuggingFaceH4/zephyr" in generation_arguments.model_name:
     model = AutoModelForCausalLM.from_pretrained(
         generation_arguments.model_name,
         quantization_config=bnb_config,
         device_map={"": 0}
     )
+elif "lvcalucioli/zephyr" in generation_arguments.model_name:
+    model = AutoModelForCausalLM.from_pretrained(
+        generation_arguments.model_name,
+        device_map={"": 0}
+    )
+elif "uniba" in generation_arguments.model_name:
+    model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                                 quantization_config=bnb_config,
+                                                 device_map={"": 0},)
+elif "lvcalucioli/llama" in generation_arguments.model_name:
+        model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                                 device_map={"": 0},)
+elif "flan" in generation_arguments.model_name:
+    model = AutoModelForSeq2SeqLM.from_pretrained(generation_arguments.model_name, 
+                                                  device_map={"":0},)
+    
+
 
 model.config.use_cache = False
 model.config.pretraining_tp = 1
@@ -124,45 +154,66 @@ tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
 def generate_preds(dataset):
-    pipe = pipeline(task="text-generation", 
-                        model=model, 
-                        trust_remote_code=True,
+    if "flan" in generation_arguments.model_name:
+        pipe = pipeline("text2text-generation", 
+                        model=generation_arguments.model_name,
                         tokenizer=tokenizer,
+                        trust_remote_code=True,
                         max_new_tokens=generation_arguments.max_new_tokens, #123
                         # do_sample=True,
                         # top_k=generation_arguments.top_k,
                         # top_p=generation_arguments.top_p,
                         # temperature=generation_arguments.temperature,
                         # num_beams=generation_arguments.num_beams,
-                        pad_token_id=tokenizer.eos_token_id
-                        
-        )
+                        pad_token_id=tokenizer.eos_token_id)
+    else:
+        pipe = pipeline(task="text-generation", 
+                            model=model, 
+                            trust_remote_code=True,
+                            tokenizer=tokenizer,
+                            max_new_tokens=generation_arguments.max_new_tokens, #123
+                            do_sample=True,
+                            top_k=generation_arguments.top_k,
+                            top_p=generation_arguments.top_p,
+                            temperature=generation_arguments.temperature,
+                            num_beams=generation_arguments.num_beams,
+                            pad_token_id=tokenizer.eos_token_id
+                            
+            )
     
     i = 0  
     preds = []      
     for instance in dataset["test"]["text"]:
         print(f'''generation: {i}''')
         pred = pipe(instance)
-        pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_prediction) + len(generation_arguments.start_prediction):] 
-        print(pred[0]["generated_text"])
-        end_idx = pred[0]["generated_text"].find(generation_arguments.end_prediction)
-        if end_idx == -1:
+        if "flan" in generation_arguments.model_name:
+            print(pred[0]["generated_text"])
             preds.append({
-                "generated_text" : pred[0]["generated_text"],
-                "id" : dataset["test"]["id"][i],
-                "answer" : dataset["test"]["answer"][i],
-                "prompt" : dataset["test"]["text"][i]})
+                    "generated_text" : pred[0]["generated_text"],
+                    "id" : dataset["test"]["id"][i],
+                    "answer" : dataset["test"]["answer"][i],
+                    "prompt" : dataset["test"]["text"][i]})
         else:
-            preds.append({
-                "generated_text" : pred[0]["generated_text"][: end_idx],
-                "id" : dataset["test"]["id"][i],
-                "answer" : dataset["test"]["answer"][i],
-                "prompt" : dataset["test"]["text"][i]})
+            pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_prediction) + len(generation_arguments.start_prediction):] 
+            print(pred[0]["generated_text"])
+            end_idx = pred[0]["generated_text"].find(generation_arguments.end_prediction)
+            if end_idx == -1:
+                preds.append({
+                    "generated_text" : pred[0]["generated_text"],
+                    "id" : dataset["test"]["id"][i],
+                    "answer" : dataset["test"]["answer"][i],
+                    "prompt" : dataset["test"]["text"][i]})
+            else:
+                preds.append({
+                    "generated_text" : pred[0]["generated_text"][: end_idx],
+                    "id" : dataset["test"]["id"][i],
+                    "answer" : dataset["test"]["answer"][i],
+                    "prompt" : dataset["test"]["text"][i]})
         i = i + 1
-    with open("backup.json", 'a') as file:
-        json.dump(preds, file, indent=4)
+    with open("backup.json", 'a', encoding='utf8') as file:
+        json.dump(preds, file, indent=4, ensure_ascii=False)
     with open(generation_arguments.predictions_path, 'a') as file:
-        json.dump(preds, file, indent=4)
+        json.dump(preds, file, indent=4, ensure_ascii=False)
 
 
 def main():
