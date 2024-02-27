@@ -97,4 +97,28 @@
 }{
     "datetime": "2024-02-25T03:44:20.176612",
     "model_name": "flan-t5-large_"
+}{
+    "datetime": "2024-02-25T07:10:25.173760",
+    "model_name": "llamantino7b_2_2",
+    "layers": [
+        "gate_proj",
+        "down_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+    ]
+}{
+    "datetime": "2024-02-25T11:38:14.544895",
+    "model_name": "llamantino7b_2_2",
+    "layers": [
+        "up_proj",
+        "q_proj",
+        "v_proj",
+        "k_proj",
+        "o_proj",
+        "down_proj",
+        "gate_proj"
+    ]
 }

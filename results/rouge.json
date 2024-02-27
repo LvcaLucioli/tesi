@@ -422,4 +422,92 @@
     "R": 5.5,
     "model_name": "google/flan-t5-large",
     "datetime": "2024-02-25T04:01:09.881785"
+}{
+    "rouge1": 0.83,
+    "rouge2": 0.23,
+    "rougeL": 0.83,
+    "rougeLsum": 0.83,
+    "R": 0.63,
+    "model_name": "lvcalucioli/llamantino7b_2_2_syntetic-question-answering_merged",
+    "datetime": "2024-02-25T12:27:18.500042"
+}{
+    "rouge1": 5.43,
+    "rouge2": 0.55,
+    "rougeL": 5.14,
+    "rougeLsum": 5.16,
+    "R": 3.7,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T15:17:18.348201"
+}{
+    "rouge1": 8.75,
+    "rouge2": 1.67,
+    "rougeL": 7.23,
+    "rougeLsum": 7.36,
+    "R": 5.88,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T15:38:55.490189"
+}{
+    "rouge1": 8.66,
+    "rouge2": 1.66,
+    "rougeL": 7.21,
+    "rougeLsum": 7.3,
+    "R": 5.84,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T16:17:54.668876"
+}{
+    "rouge1": 8.72,
+    "rouge2": 1.66,
+    "rougeL": 7.18,
+    "rougeLsum": 7.31,
+    "R": 5.85,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T16:18:19.484318"
+}{
+    "rouge1": 5.41,
+    "rouge2": 0.54,
+    "rougeL": 5.15,
+    "rougeLsum": 5.07,
+    "R": 3.7,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T16:18:24.209651"
+}{
+    "rouge1": 8.74,
+    "rouge2": 1.67,
+    "rougeL": 7.22,
+    "rougeLsum": 7.35,
+    "R": 5.87,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T16:22:06.741404"
+}{
+    "rouge1": 8.71,
+    "rouge2": 1.68,
+    "rougeL": 7.21,
+    "rougeLsum": 7.28,
+    "R": 5.86,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T16:22:40.734778"
+}{
+    "rouge1": 7.48,
+    "rouge2": 0.93,
+    "rougeL": 6.85,
+    "rougeLsum": 6.77,
+    "R": 5.08,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T16:22:51.532367"
+}{
+    "rouge1": 7.28,
+    "rouge2": 0.86,
+    "rougeL": 6.64,
+    "rougeLsum": 6.67,
+    "R": 4.92,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T16:32:09.716794"
+}{
+    "rouge1": 43.33,
+    "rouge2": 36.08,
+    "rougeL": 42.5,
+    "rougeLsum": 42.63,
+    "R": 40.59,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_question-answering_merged",
+    "datetime": "2024-02-26T23:04:53.222461"
 }

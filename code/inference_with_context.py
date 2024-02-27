@@ -2,7 +2,9 @@ import pandas as pd
 import json
 import ast
 from transformers import (pipeline,
-                          HfArgumentParser,)
+                          HfArgumentParser,
+                          AutoTokenizer,
+                          AutoModelForCausalLM)
 from typing import Optional
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -22,6 +24,9 @@ class GenerationArguments:
         default=None, metadata={'help' : 'max new tokens'}
     )
     task: Optional[str] = field(
+        default=None, metadata={'help' : 'task'}
+    )
+    start_predictions: Optional[str] = field(
         default=None, metadata={'help' : 'task'}
     )
     
@@ -72,13 +77,19 @@ def create_context(ds_row, k):
 
 def generate(inputs, dataset):
     
-    start_predictions = "## Risposta:"
-    
+    # start_predictions = "## Risposta:"
+    tokenizer = AutoTokenizer.from_pretrained(generation_arguments.model_name,
+                                              padding_side="left")
+    model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                                 low_cpu_mem_usage=True)
+    model.config.pad_token_id = model.config.eos_token_id
     pipe = pipeline(generation_arguments.task, 
-                    model=generation_arguments.model_name,
-                    tokenizer=generation_arguments.model_name,
+                    model=model,
+                    tokenizer=tokenizer,
+                    # padding_side="left",
                     # device=0,
                     batch_size=16,
+                    # low_cpu_mem_usage=True
                     # max_seq_length=256,
                     )
     out = pipe(inputs,
@@ -90,7 +101,7 @@ def generate(inputs, dataset):
     i = 0
     result = []
     for pred in out:
-        pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(start_predictions) + len(start_predictions):] 
+        pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_predictions) + len(generation_arguments.start_predictions):] 
         result.append({
             "id" : int(dataset["question_id"][i]),
             "question" : dataset["question"][i],

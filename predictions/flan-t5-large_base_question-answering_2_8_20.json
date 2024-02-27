@@ -18,13 +18,13 @@
         "prompt": "\n\nDomanda: In applicazione di quale principio le stazioni appaltanti devono garantire l'uso ottimale delle risorse da impiegare nello svolgimento della selezione ovvero nell'esecuzione del contratto?\n\nRisposta: "
     },
     {
-        "generated_text": "In quali casi la Definizione a contrarre prevede l'inserzione di un \"obbligo di motivazione\" più ampio",
+        "generated_text": "",
         "id": 197,
         "answer": "Nei casi in cui l'Amministrazione dia il via ad una procedura negoziata, al fine di motivare la scelta di questo tipo di procedura",
         "prompt": "\n\nDomanda: In quali casi la Determina a contrarre prevede l'inserimento di un \"obbligo di motivazione\" più ampio?\n\nRisposta: "
     },
     {
-        "generated_text": "La P.A. pu recedere da un contratto qualora...",
+        "generated_text": "",
         "id": 231,
         "answer": "Sia previsto dalla legge o dal contratto medesimo",
         "prompt": "\n\nDomanda: La P.A. può recedere da un contratto qualora...\n\nRisposta: "
@@ -54,25 +54,25 @@
         "prompt": "\n\nDomanda: Cosa si intende per requisiti di partecipazione ad una gara per l'affidamento di un appalto pubblico?\n\nRisposta: "
     },
     {
-        "generated_text": "La diritto d'accesso agli atti dei processi di affidamento e di esecuzione dei contratti...",
+        "generated_text": "",
         "id": 152,
         "answer": "È ammesso e trova applicazione la l.241/90, salvo quanto stabilito dal d.lgs. 50/2016",
         "prompt": "\n\nDomanda: Il diritto d'accesso agli atti delle procedure di affidamento e di esecuzione dei contratti...\n\nRisposta: "
     },
     {
-        "generated_text": "In caso di proroga dei termini di presentation delle offerte è consentito agli operatori economici che hanno già presentato l'offerta di ritirarla e eventualmente si stesse ai sensi di art. 92, co 3, del D.Lgs.36/2023?",
+        "generated_text": "",
         "id": 185,
         "answer": "Sì, sempre",
         "prompt": "\n\nDomanda: In caso di proroga dei termini di presentazione delle offerte è consentito agli operatori economici che hanno già presentato l'offerta di ritirarla ed eventualmente sostituirla ai sensi dell'art. 92, co 3, del D.Lgs.36/2023?\n\nRisposta: "
     },
     {
-        "generated_text": "Con riferimento al procedimento ad evidenza pubblica, la determinazione a contrattare:",
+        "generated_text": "",
         "id": 83,
         "answer": "Deve indicare, tra l'altro, gli elementi essenziali del futuro contratto",
         "prompt": "\n\nDomanda: Con riferimento al procedimento ad evidenza pubblica, la determinazione a contrattare:\n\nRisposta: "
     },
     {
-        "generated_text": "In accordo con l'art.88, comma 1, del D.Lgs.36/2023, a retrare dalla date di pubblicazione di un aviso o dalla date di invio di un invito a confermare l'interesse i documenti di gara:",
+        "generated_text": "",
         "id": 45,
         "answer": "sono resi disponibili in forma digitale, in modo gratuito, illimitato e diretto",
         "prompt": "\n\nDomanda: Ai sensi dell'art.88, comma 1, del D.Lgs.36/2023, a decorrere dalla data di pubblicazione di un avviso o da quella di invio di un invito a confermare l'interesse i documenti di gara :\n\nRisposta: "
@@ -84,13 +84,13 @@
         "prompt": "\n\nDomanda: L'esecuzione del contratto:\n\nRisposta: "
     },
     {
-        "generated_text": "Criteri di aggiudicazione che il Pubblica Amministrazione pu utilizzare per individuare l'offerta aggiudicataria",
+        "generated_text": "",
         "id": 392,
         "answer": "Il criterio del prezzo più basso ovvero il criterio della offerta economicamente più vantaggiosa",
         "prompt": "\n\nDomanda: Quali sono i criteri di aggiudicazione che la Pubblica Amministrazione può utilizzare per individuare l'offerta aggiudicataria ?\n\nRisposta: "
     },
     {
-        "generated_text": "A operatore economico che è affidato un appalto o una concessione si chiama:",
+        "generated_text": "",
         "id": 445,
         "answer": "aggiudicatario (D.Lgs. 36/2023 e s.m.i.)",
         "prompt": "\n\nDomanda: Un operatore economico cui è affidato un appalto o una concessione si chiama:\n\nRisposta: "
@@ -102,13 +102,13 @@
         "prompt": "\n\nDomanda: Le amministrazioni abilitate possono concludere accordi specifici dopo gli accordi quadri?\n\nRisposta: "
     },
     {
-        "generated_text": "La Codice degli appalti stabilisce che gli operatori economici in possessione della Certificazione UNI EN ISO 9000 possano presentare una garanzia provvisoria ridotta. A quanto ammonta quel riduzione?",
+        "generated_text": "",
         "id": 144,
         "answer": "Al 50%",
         "prompt": "\n\nDomanda: Il Codice degli appalti stabilisce che gli operatori economici in possesso della Certificazione UNI EN ISO 9000 possano presentare una garanzia provvisoria ridotta. A quanto ammonta tale riduzione?\n\nRisposta: "
     },
     {
-        "generated_text": "In caso di procedura aperta:",
+        "generated_text": "",
         "id": 184,
         "answer": "qualsiasi operatore economico interessato può presentare un'offerta in risposta a un avviso di indizione di gara",
         "prompt": "\n\nDomanda: In caso di procedura aperta:\n\nRisposta: "
@@ -132,7 +132,7 @@
         "prompt": "\n\nDomanda: A chi è demandata la valutazione dell'offerta di lavori qualora si proceda con il criterio dell'offerta economicamente più vantaggiosa?\n\nRisposta: "
     },
     {
-        "generated_text": "Question: Per operazioni pubbliche di interesse statale, la stazione appaltante trasmette il progetto di fattibilità tecnica ed economica, ai sensi di art. 38 comma 4 del D.Lgs. 36/2023, al:",
+        "generated_text": "",
         "id": 335,
         "answer": "Consiglio superiore dei lavori pubblici",
         "prompt": "\n\nDomanda: Per le opere pubbliche di interesse statale, la stazione appaltante trasmette il progetto di fattibilità tecnica ed economica, ai sensi dell'art.38 comma 4 del D.Lgs. 36/2023, al:\n\nRisposta: "

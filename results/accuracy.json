@@ -118,4 +118,92 @@
     "accuracy score": 0.5824175824175825,
     "model_name": "lvcalucioli/flan-t5-large__question-answering",
     "datetime": "2024-02-25T04:05:35.199646"
+}{
+    "accuracy score": 0.054945054945054944,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-25T20:15:09.782986"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-25T20:18:38.912228"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-25T20:23:46.039560"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "swap-uniba/LLaMAntino-2-7b-hf-ITA",
+    "datetime": "2024-02-25T20:23:47.982443"
+}{
+    "accuracy score": 0.6593406593406593,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T15:06:41.390619"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T15:09:05.881306"
+}{
+    "accuracy score": 0.6593406593406593,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple-choice_merged",
+    "datetime": "2024-02-26T15:10:36.823214"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T15:10:39.127518"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_question-answering_merged",
+    "datetime": "2024-02-26T16:13:23.034138"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T16:13:25.312736"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_question-answering_merged",
+    "datetime": "2024-02-26T16:16:45.754669"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T16:16:47.964020"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T16:16:50.061972"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T16:17:57.143649"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T23:50:08.921097"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T23:50:11.380908"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_question-answering_merged",
+    "datetime": "2024-02-26T23:50:28.238614"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T23:50:30.574394"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T23:50:32.805606"
+}{
+    "accuracy score": 0.08791208791208792,
+    "model_name": "lvcalucioli/zephyr-7b-beta_question-answering_question-answering_merged",
+    "datetime": "2024-02-26T23:53:25.543383"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-26T23:53:27.890667"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-26T23:53:30.098216"
 }

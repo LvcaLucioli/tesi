@@ -1,548 +1,548 @@
 [
     {
-        "generated_text": " \"La domanda \u00e8: Analizza la domanda e ris",
+        "generated_text": " The procedure for public procurement is an exception to the general principle of equal treatment",
         "id": 337,
         "answer": "Dialogo competitivo",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Per l'individuazione degli operatori economici che possono presentare offerte per l'affidamento di un contratto pubblico, le stazioni appaltanti utilizzano le procedure previste dal Codice dei contratti pubblici. Quali tra le seguenti \u00e8 una procedura a carattere eccezionale?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Per l'individuazione degli operatori economici che possono presentare offerte per l'affidamento di un contratto pubblico, le stazioni appaltanti utilizzano le procedure previste dal Codice dei contratti pubblici. Quali tra le seguenti è una procedura a carattere eccezionale?\nOutput:"
     },
     {
-        "generated_text": " \"In caso di mancata nomina del RUP da part",
+        "generated_text": " In case of a name of the RUP from the Appealing Body,",
         "id": 183,
-        "answer": "dal responsabile dell'unit\u00e0 organizzativa competente per l'intervento",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In caso di mancata nomina del RUP da parte della Stazione Appaltante, nell'atto di avvio dell'intervento pubblico, ai sensi dell'art. 15 comma 2 del D.Lgs. 36/2023, l'incarico \u00e8 svolto :\nOutput:"
+        "answer": "dal responsabile dell'unità organizzativa competente per l'intervento",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In caso di mancata nomina del RUP da parte della Stazione Appaltante, nell'atto di avvio dell'intervento pubblico, ai sensi dell'art. 15 comma 2 del D.Lgs. 36/2023, l'incarico è svolto :\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " In applicazione di quale principio le stazioni app",
         "id": 174,
-        "answer": "In applicazione del principio di economicit\u00e0",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In applicazione di quale principio le stazioni appaltanti devono garantire l'uso ottimale delle risorse da impiegare nello svolgimento della selezione ovvero nell'esecuzione del contratto?\nOutput:"
+        "answer": "In applicazione del principio di economicità",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In applicazione di quale principio le stazioni appaltanti devono garantire l'uso ottimale delle risorse da impiegare nello svolgimento della selezione ovvero nell'esecuzione del contratto?\nOutput:"
     },
     {
         "generated_text": " In quali casi la Determina a contrarre prevede",
         "id": 197,
         "answer": "Nei casi in cui l'Amministrazione dia il via ad una procedura negoziata, al fine di motivare la scelta di questo tipo di procedura",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In quali casi la Determina a contrarre prevede l'inserimento di un \"obbligo di motivazione\" pi\u00f9 ampio?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In quali casi la Determina a contrarre prevede l'inserimento di un \"obbligo di motivazione\" più ampio?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The P.A. can terminate from a non-contractual agreement.",
         "id": 231,
         "answer": "Sia previsto dalla legge o dal contratto medesimo",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La P.A. pu\u00f2 recedere da un contratto qualora...\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La P.A. può recedere da un contratto qualora...\nOutput:"
     },
     {
-        "generated_text": " The correct answer is:\n\na) La domanda\nb)",
+        "generated_text": " Una procedura che può essere utilizzata solo",
         "id": 341,
         "answer": "Partenariato per l'innovazione",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Per l'individuazione degli operatori economici che possono presentare offerte per l'affidamento di un contratto pubblico, le stazioni appaltanti utilizzano le procedure previste dal Codice dei contratti pubblici. Quale tra le seguenti \u00e8 una procedura che pu\u00f2 essere utilizzata solo quando sussistono particolari presupposti?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Per l'individuazione degli operatori economici che possono presentare offerte per l'affidamento di un contratto pubblico, le stazioni appaltanti utilizzano le procedure previste dal Codice dei contratti pubblici. Quale tra le seguenti è una procedura che può essere utilizzata solo quando sussistono particolari presupposti?\nOutput:"
     },
     {
-        "generated_text": " The intent of the legislator in relation to the Code of Public Contracts is to",
+        "generated_text": " The intent of the legislator is to regulate the public contracts.\n",
         "id": 363,
-        "answer": "L'intento del legislatore \u00e8 quello di separare nettamente la fase di scelta del contraente, retta da regole pubblicistiche, che culmina nell'aggiudicazione, dalla fase di stipulazione del contratto, retta da regole di diritto privato",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Qual \u00e8 l'intento del legislatore in relazione al Codice dei contratti Pubblici?\nOutput:"
+        "answer": "L'intento del legislatore è quello di separare nettamente la fase di scelta del contraente, retta da regole pubblicistiche, che culmina nell'aggiudicazione, dalla fase di stipulazione del contratto, retta da regole di diritto privato",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Qual è l'intento del legislatore in relazione al Codice dei contratti Pubblici?\nOutput:"
     },
     {
-        "generated_text": " \"Il Soggetto Aggiudicatore richiede l",
+        "generated_text": " The Soggetto Aggiudicatore needs the ability and operation",
         "id": 168,
         "answer": "il Punto Ordinante",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il Soggetto Aggiudicatore richiede l'abilitazione e opera nell'ambito del Sistema di e-Procurement attraverso:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il Soggetto Aggiudicatore richiede l'abilitazione e opera nell'ambito del Sistema di e-Procurement attraverso:\nOutput:"
     },
     {
         "generated_text": " \"I intend to comply with the requirements for admission to a public event.\"",
         "id": 107,
         "answer": "Le caratteristiche tecnico-organizzative e economiche-finanziarie che l'impresa deve possedere per partecipare alla gara",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Cosa si intende per requisiti di partecipazione ad una gara per l'affidamento di un appalto pubblico?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Cosa si intende per requisiti di partecipazione ad una gara per l'affidamento di un appalto pubblico?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The law of access to the documents of the procedures of affirming and executing",
         "id": 152,
-        "answer": "\u00c8 ammesso e trova applicazione la l.241/90, salvo quanto stabilito dal d.lgs. 50/2016",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il diritto d'accesso agli atti delle procedure di affidamento e di esecuzione dei contratti...\nOutput:"
+        "answer": "È ammesso e trova applicazione la l.241/90, salvo quanto stabilito dal d.lgs. 50/2016",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il diritto d'accesso agli atti delle procedure di affidamento e di esecuzione dei contratti...\nOutput:"
     },
     {
-        "generated_text": " \"In caso di proroga dei termini di presentaz",
+        "generated_text": " The correct answer is \"Yes\".\n\nExplanation: The question",
         "id": 185,
-        "answer": "S\u00ec, sempre",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In caso di proroga dei termini di presentazione delle offerte \u00e8 consentito agli operatori economici che hanno gi\u00e0 presentato l'offerta di ritirarla ed eventualmente sostituirla ai sensi dell'art. 92, co 3, del D.Lgs.36/2023?\nOutput:"
+        "answer": "Sì, sempre",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In caso di proroga dei termini di presentazione delle offerte è consentito agli operatori economici che hanno già presentato l'offerta di ritirarla ed eventualmente sostituirla ai sensi dell'art. 92, co 3, del D.Lgs.36/2023?\nOutput:"
     },
     {
-        "generated_text": " \"Io consegna che la determinazione a contratt",
+        "generated_text": " The procedure to determine a contract is based on public evidence.\n",
         "id": 83,
         "answer": "Deve indicare, tra l'altro, gli elementi essenziali del futuro contratto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Con riferimento al procedimento ad evidenza pubblica, la determinazione a contrattare:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Con riferimento al procedimento ad evidenza pubblica, la determinazione a contrattare:\nOutput:"
     },
     {
-        "generated_text": " \"La domanda \u00e8 stato rispondita in italian",
+        "generated_text": " \"La data di pubblicazione di un avviso o",
         "id": 45,
         "answer": "sono resi disponibili in forma digitale, in modo gratuito, illimitato e diretto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Ai sensi dell'art.88, comma 1, del D.Lgs.36/2023, a decorrere dalla data di pubblicazione di un avviso o da quella di invio di un invito a confermare l'interesse i documenti di gara :\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Ai sensi dell'art.88, comma 1, del D.Lgs.36/2023, a decorrere dalla data di pubblicazione di un avviso o da quella di invio di un invito a confermare l'interesse i documenti di gara :\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The execution of the contract:\n",
         "id": 283,
-        "answer": "pu\u00f2 avere inizio solo dopo che lo stesso \u00e8 divenuto efficace, salvo che, in casi di urgenza, la stazione appaltante ne chieda l'esecuzione anticipata, nei modi e alle condizioni previste al co. 8 del citato articolo",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'esecuzione del contratto:\nOutput:"
+        "answer": "può avere inizio solo dopo che lo stesso è divenuto efficace, salvo che, in casi di urgenza, la stazione appaltante ne chieda l'esecuzione anticipata, nei modi e alle condizioni previste al co. 8 del citato articolo",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'esecuzione del contratto:\nOutput:"
     },
     {
-        "generated_text": " \"Quali sono i criteri di aggiudicazione che",
+        "generated_text": " Quali sono i criteri di aggiudicazione che la",
         "id": 392,
-        "answer": "Il criterio del prezzo pi\u00f9 basso ovvero il criterio della offerta economicamente pi\u00f9 vantaggiosa",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quali sono i criteri di aggiudicazione che la Pubblica Amministrazione pu\u00f2 utilizzare per individuare l'offerta aggiudicataria ?\nOutput:"
+        "answer": "Il criterio del prezzo più basso ovvero il criterio della offerta economicamente più vantaggiosa",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quali sono i criteri di aggiudicazione che la Pubblica Amministrazione può utilizzare per individuare l'offerta aggiudicataria ?\nOutput:"
     },
     {
-        "generated_text": " \"Un operatore economico cui \u00e8 affidato un",
+        "generated_text": " The name of the economist who is attached to an app or a concession is",
         "id": 445,
         "answer": "aggiudicatario (D.Lgs. 36/2023 e s.m.i.)",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Un operatore economico cui \u00e8 affidato un appalto o una concessione si chiama:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Un operatore economico cui è affidato un appalto o una concessione si chiama:\nOutput:"
     },
     {
-        "generated_text": " \"Yes\"\n",
+        "generated_text": " \"",
         "id": 261,
         "answer": "Si, queste provvedono a negoziare i singoli contratti",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Le amministrazioni abilitate possono concludere accordi specifici dopo gli accordi quadri?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Le amministrazioni abilitate possono concludere accordi specifici dopo gli accordi quadri?\nOutput:"
     },
     {
-        "generated_text": " The code snippet checks if the user's response is in Italian. If it",
+        "generated_text": " La Certificazione UNI EN ISO 9000 è un codice",
         "id": 144,
         "answer": "Al 50%",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il Codice degli appalti stabilisce che gli operatori economici in possesso della Certificazione UNI EN ISO 9000 possano presentare una garanzia provvisoria ridotta. A quanto ammonta tale riduzione?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il Codice degli appalti stabilisce che gli operatori economici in possesso della Certificazione UNI EN ISO 9000 possano presentare una garanzia provvisoria ridotta. A quanto ammonta tale riduzione?\nOutput:"
     },
     {
-        "generated_text": " \"In caso di procedura aperta: \"\n",
+        "generated_text": "\n1. La domanda di procedura aperta è:",
         "id": 184,
-        "answer": "qualsiasi operatore economico interessato pu\u00f2 presentare un'offerta in risposta a un avviso di indizione di gara",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In caso di procedura aperta:\nOutput:"
+        "answer": "qualsiasi operatore economico interessato può presentare un'offerta in risposta a un avviso di indizione di gara",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In caso di procedura aperta:\nOutput:"
     },
     {
-        "generated_text": " The price of technology is a value that is typical of an offer that has",
+        "generated_text": " The technician's fee is a typical value of an offer that has come to",
         "id": 159,
-        "answer": "l'offerta economicamente pi\u00f9 vantaggiosa",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il pregio tecnico \u00e8 un valore che \u00e8 tipico di un'offerta che ha come criterio di aggiudicazione:\nOutput:"
+        "answer": "l'offerta economicamente più vantaggiosa",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il pregio tecnico è un valore che è tipico di un'offerta che ha come criterio di aggiudicazione:\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The execution of the contract is controlled:\n",
         "id": 282,
         "answer": "dal responsabile unico del procedimento, congiuntamente al direttore dei lavori, per i lavori, o dal direttore dell'esecuzione del contratto, per i servizi e le forniture",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'esecuzione del contratto \u00e8 controllata:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'esecuzione del contratto è controllata:\nOutput:"
     },
     {
-        "generated_text": " \"Analizza la domanda e rispondi in italian",
+        "generated_text": " A chi è demandata la valutazione dell'off",
         "id": 0,
         "answer": "A una commissione giudicatrice",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: A chi \u00e8 demandata la valutazione dell'offerta di lavori qualora si proceda con il criterio dell'offerta economicamente pi\u00f9 vantaggiosa?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: A chi è demandata la valutazione dell'offerta di lavori qualora si proceda con il criterio dell'offerta economicamente più vantaggiosa?\nOutput:"
     },
     {
-        "generated_text": " \"Per le opere pubbliche di interesse",
+        "generated_text": " \"The appalti italiani sono statali di inte",
         "id": 335,
         "answer": "Consiglio superiore dei lavori pubblici",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Per le opere pubbliche di interesse statale, la stazione appaltante trasmette il progetto di fattibilit\u00e0 tecnica ed economica, ai sensi dell'art.38 comma 4 del D.Lgs. 36/2023, al:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Per le opere pubbliche di interesse statale, la stazione appaltante trasmette il progetto di fattibilità tecnica ed economica, ai sensi dell'art.38 comma 4 del D.Lgs. 36/2023, al:\nOutput:"
     },
     {
-        "generated_text": " La domanda \u00e8: \"Analizza la domanda e ris",
+        "generated_text": " The average number of days between the transmission of the virus and the publication of",
         "id": 124,
         "answer": "Entro cinque giorni",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Generalmente entro quanti giorni, dalla loro trasmissione, vengono pubblicati gli avvisi e i bandi di gara?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Generalmente entro quanti giorni, dalla loro trasmissione, vengono pubblicati gli avvisi e i bandi di gara?\nOutput:"
     },
     {
-        "generated_text": " Question: In the procedure of public evidence of a public appeasement,",
+        "generated_text": " The procedure for public evidence of a public appeasement is to indicate the",
         "id": 306,
         "answer": "Determinazione a contrattare, pubblicazione bando di gara, scelta del contraente, aggiudicazione, stipula del contratto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nella procedura ad evidenza pubblica di un appalto pubblico indicare il corretto ordine delle fasi.:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nella procedura ad evidenza pubblica di un appalto pubblico indicare il corretto ordine delle fasi.:\nOutput:"
     },
     {
-        "generated_text": " \"La domanda \u00e8 stato riuscita in italian",
+        "generated_text": " The activity of the Punti Istruttori has:\n",
         "id": 259,
         "answer": "carattere meramente interno rispetto al Soggetto Aggiudicatore di pertinenza",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'attivit\u00e0 svolta dai Punti Istruttori ha:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'attività svolta dai Punti Istruttori ha:\nOutput:"
     },
     {
-        "generated_text": " \"I documenti di gara stabiliscono i criteri di",
+        "generated_text": " I documents di gara stabiliscono i criteri di aggi",
         "id": 138,
         "answer": "alla natura, all'oggetto e alle caratteristiche del contratto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: I documenti di gara stabiliscono i criteri di aggiudicazione dell'offerta, pertinenti:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: I documenti di gara stabiliscono i criteri di aggiudicazione dell'offerta, pertinenti:\nOutput:"
     },
     {
-        "generated_text": " \"Question: What is the name of the code?\"\n",
+        "generated_text": " Answer: The code CUP stands for \"Code of Conduct for the Protection",
         "id": 53,
-        "answer": "Il codice CUP (Codice Unitario di Progetto) \u00e8 obbligatorio solamente con riguardo ad \"ogni nuovo progetto di investimento pubblico\"",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Che cos'\u00e8 il codice CUP?\nOutput:"
+        "answer": "Il codice CUP (Codice Unitario di Progetto) è obbligatorio solamente con riguardo ad \"ogni nuovo progetto di investimento pubblico\"",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Che cos'è il codice CUP?\nOutput:"
     },
     {
-        "generated_text": " Quale criterio di aggiudicazione si pu\u00f2",
+        "generated_text": " La criterio di aggiudicazione di appalto di",
         "id": 369,
-        "answer": "Il minor prezzo e l'offerta economicamente pi\u00f9 vantaggiosa",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quale criterio di aggiudicazione si pu\u00f2 applicare in caso di appalto di lavori di importo inferiore ad un milione di euro?\nOutput:"
+        "answer": "Il minor prezzo e l'offerta economicamente più vantaggiosa",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quale criterio di aggiudicazione si può applicare in caso di appalto di lavori di importo inferiore ad un milione di euro?\nOutput:"
     },
     {
-        "generated_text": " \"Gli importi della base di gara sono presenti",
+        "generated_text": " In this question, the word \"sono\" means \"are\" in",
         "id": 305,
         "answer": "Sono una parte essenziale di questa",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nella Determina a contrarre sono presenti gli importi della base di gara?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nella Determina a contrarre sono presenti gli importi della base di gara?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " \"In the execution of public and concessionary sales, the economic operators are",
         "id": 327,
-        "answer": "S\u00ec, sono tenuti a rispettare gli obblighi stabiliti dalla normativa europea e nazionale e dai contratti collettivi",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nell'esecuzione di appalti pubblici e di concessioni, gli operatori economici sono tenuti a rispettare gli obblighi in materia di lavoro?\nOutput:"
+        "answer": "Sì, sono tenuti a rispettare gli obblighi stabiliti dalla normativa europea e nazionale e dai contratti collettivi",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nell'esecuzione di appalti pubblici e di concessioni, gli operatori economici sono tenuti a rispettare gli obblighi in materia di lavoro?\nOutput:"
     },
     {
-        "generated_text": " \"Operatori economici possono riutilizzare il DG",
+        "generated_text": " Analizza la domanda e rispondi in italiano",
         "id": 131,
-        "answer": "Si, purch\u00e9 confermino che le informazioni ivi contenute sono ancore valide",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Gli operatori economici possono riutilizzare il DGUE utilizzato in una procedura d'appalto precedente?\nOutput:"
+        "answer": "Si, purché confermino che le informazioni ivi contenute sono ancore valide",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Gli operatori economici possono riutilizzare il DGUE utilizzato in una procedura d'appalto precedente?\nOutput:"
     },
     {
-        "generated_text": " \"La forma \u00e8: \"\n",
+        "generated_text": " The form is:\n\nQuestion: The form is:\n",
         "id": 226,
         "answer": "Un elemento essenziale del contratto se previsto dalla legge a pena di nullita'",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La forma \u00e8:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La forma è:\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The documents of the competitive procedures with tenders must indicate the minimum requirements that",
         "id": 295,
-        "answer": "S\u00ec",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nei documenti di gara delle procedure competitive con negoziazione le amministrazioni aggiudicatrici devono indicare i requisiti minimi che tutti gli offerenti devono soddisfare?\nOutput:"
+        "answer": "Sì",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nei documenti di gara delle procedure competitive con negoziazione le amministrazioni aggiudicatrici devono indicare i requisiti minimi che tutti gli offerenti devono soddisfare?\nOutput:"
     },
     {
-        "generated_text": " \"Per soddisfare la richiesta relativa al possesso de",
+        "generated_text": "\n\n1. Per soddisfare la richiesta relativa al",
         "id": 354,
         "answer": "all'avvalimento",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Per soddisfare la richiesta relativa al possesso dei requisiti di carattere economico, finanziario, tecnico e professionale necessari per la partecipazione a un appalto pubblico, un operatore economico pu\u00f2 ricorrere:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Per soddisfare la richiesta relativa al possesso dei requisiti di carattere economico, finanziario, tecnico e professionale necessari per la partecipazione a un appalto pubblico, un operatore economico può ricorrere:\nOutput:"
     },
     {
-        "generated_text": " 1. Operazioni economiche\n2. Offerta\n",
+        "generated_text": " The economic operators, in the place of offer, indicate:\n",
         "id": 132,
         "answer": "le parti del contratto di concessione che intendono subappaltare a terzi",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Gli operatori economici, in sede di offerta, indicano:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Gli operatori economici, in sede di offerta, indicano:\nOutput:"
     },
     {
-        "generated_text": " \"Quale tra le seguenti fasi della procedura",
+        "generated_text": " Seguenti fasi della procedura ad evidenza pub",
         "id": 383,
         "answer": "Scelta del contraente",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quale tra le seguenti fasi della procedura ad evidenza pubblica viene per prima rispetto alle altre?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quale tra le seguenti fasi della procedura ad evidenza pubblica viene per prima rispetto alle altre?\nOutput:"
     },
     {
-        "generated_text": " \"Appalto di lavori di importo a base di g",
+        "generated_text": " The correct answer is:\n\na) 100.000 Euro\nb",
         "id": 51,
         "answer": "95.000 Euro",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Appalto di lavori di importo a base di gara soggetto a ribasso di 100.000 Euro, oltre 5.000 Euro per oneri di sicurezza non soggetti a ribasso. Il Concorrente aggiudicatario ha offerto il 10 % di ribasso. Quale sar\u00e0 l'importo di aggiudicazione dei lavori?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Appalto di lavori di importo a base di gara soggetto a ribasso di 100.000 Euro, oltre 5.000 Euro per oneri di sicurezza non soggetti a ribasso. Il Concorrente aggiudicatario ha offerto il 10 % di ribasso. Quale sarà l'importo di aggiudicazione dei lavori?\nOutput:"
     },
     {
-        "generated_text": " The ANAC guarantees the promotion of efficiency and quality of activity at the stations",
+        "generated_text": " The ANAC guarantees the promotion of the efficiency and quality of the activity of",
         "id": 256,
         "answer": "linee guida, bandi-tipo, capitolati-tipo, contratti-tipo ed altri strumenti di regolazione flessibile, comunque denominati",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'ANAC garantisce la promozione dell'efficienza e della qualit\u00e0 dell'attivit\u00e0 delle stazioni appaltanti attraverso:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'ANAC garantisce la promozione dell'efficienza e della qualità dell'attività delle stazioni appaltanti attraverso:\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The law has addressed the following functions, following the entry into force of the",
         "id": 386,
-        "answer": "Ha assorbito le funzioni e le risorse dell'ex Autorit\u00e0 per la vigilanza sui contratti pubblici di lavori, servizi e forniture (AVCP)",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quali funzioni ha assunto, a seguito dell'entrata in vigore della Legge 11 agosto 2014, n. 114, di conversione del decreto legge 24 giugno 2014, n.90, la nuova Autorit\u00e0 Nazionale Anticorruzione?\nOutput:"
+        "answer": "Ha assorbito le funzioni e le risorse dell'ex Autorità per la vigilanza sui contratti pubblici di lavori, servizi e forniture (AVCP)",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quali funzioni ha assunto, a seguito dell'entrata in vigore della Legge 11 agosto 2014, n. 114, di conversione del decreto legge 24 giugno 2014, n.90, la nuova Autorità Nazionale Anticorruzione?\nOutput:"
     },
     {
-        "generated_text": " The answer is:\n\nRUP: The RUP acronym stands for",
+        "generated_text": " The answer is:\n\nRUP: The RUP, in the",
         "id": 243,
         "answer": "il responsabile unico del progetto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La sigla RUP, nell'ambito del Codice dei contratti pubblici, indica:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La sigla RUP, nell'ambito del Codice dei contratti pubblici, indica:\nOutput:"
     },
     {
-        "generated_text": " \"Ai sensi dell'art. 90, comma 1,",
+        "generated_text": " The correct answer is:\n\nQuestion: According to art. 90,",
         "id": 33,
         "answer": "Entro cinque giorni dall'adozione del provvedimento",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Ai sensi dell'art. 90, comma 1, lettera b, del D.Lgs. 36/2023, le stazioni appaltanti entro quanti giorni comunicano l'aggiudicazione all'aggiudicatario?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Ai sensi dell'art. 90, comma 1, lettera b, del D.Lgs. 36/2023, le stazioni appaltanti entro quanti giorni comunicano l'aggiudicazione all'aggiudicatario?\nOutput:"
     },
     {
-        "generated_text": " \"Quali istituti possono incidere sulla produ",
+        "generated_text": " Istituti possono incidere sulla produzione di",
         "id": 387,
         "answer": "Recesso, sospensione, risoluzione",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quali istituti possono incidere sulla produzione di effetti del contratto stipulato?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quali istituti possono incidere sulla produzione di effetti del contratto stipulato?\nOutput:"
     },
     {
-        "generated_text": " The question is: What entity is responsible for maintaining the standardization of the",
+        "generated_text": " Quale ente si occupa di stabilire le modalità",
         "id": 373,
-        "answer": "L'ANAC con proprie linee guida stabilisce le modalit\u00e0 di dettaglio per la formazione e gestione degli elenchi degli operatori economici",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quale ente si occupa di stabilire le modalit\u00e0 di dettaglio per la formazione degli elenchi degli operatori economici?\nOutput:"
+        "answer": "L'ANAC con proprie linee guida stabilisce le modalità di dettaglio per la formazione e gestione degli elenchi degli operatori economici",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quale ente si occupa di stabilire le modalità di dettaglio per la formazione degli elenchi degli operatori economici?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " The discipline of archery:\n\n1. The discipline of archery",
         "id": 44,
         "answer": "fissa le regole per lo svolgimento del procedimento di selezione delle offerte",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Ai sensi dell'art.87, co, 1, del D.Lgs. 36/2023 e s.m.i., il disciplinare di gara:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Ai sensi dell'art.87, co, 1, del D.Lgs. 36/2023 e s.m.i., il disciplinare di gara:\nOutput:"
     },
     {
-        "generated_text": " \"Ai sensi del Codice dei contratti, l'",
+        "generated_text": " The definitive judgment becomes effective.\n",
         "id": 20,
         "answer": "dopo la verifica del possesso dei prescritti requisiti",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Ai sensi del Codice dei contratti, l'aggiudicazione definitiva diventa efficace:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Ai sensi del Codice dei contratti, l'aggiudicazione definitiva diventa efficace:\nOutput:"
     },
     {
-        "generated_text": " \"Come viene qualificato, secondo il Codice dei",
+        "generated_text": " Come viene qualificato, secondo il Codice dei contr",
         "id": 80,
         "answer": "Il principio di rotazione degli operatori economici",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Come viene qualificato, secondo il Codice dei contratti, uno dei principi fondamentali per l'affidamento diretto dei servizi e forniture sottosoglia?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Come viene qualificato, secondo il Codice dei contratti, uno dei principi fondamentali per l'affidamento diretto dei servizi e forniture sottosoglia?\nOutput:"
     },
     {
-        "generated_text": " The person who is responsible for the acquisition of the DURC is the",
+        "generated_text": " Analizza la domanda e rispondi in italiano",
         "id": 72,
         "answer": "Le stazioni appaltanti e gli enti aggiudicatori",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Chi si occupa dell'acquisizione del DURC?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Chi si occupa dell'acquisizione del DURC?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " Come si quantifica la garanzia nei casi di agg",
         "id": 79,
         "answer": "Attraverso una garanzia fideiussoria del 20% aumentata di due punti percentuali per ogni punto di ribasso superiore al 20 per cento",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Come si quantifica la garanzia nei casi di aggiudicazione ad un ribasso maggiore del 20%?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Come si quantifica la garanzia nei casi di aggiudicazione ad un ribasso maggiore del 20%?\nOutput:"
     },
     {
-        "generated_text": " Yes, there is a possibility to evaluate additional \"imprese aus",
+        "generated_text": " Yes, there is a possibility of availing more \"imprese a",
         "id": 410,
         "answer": "Si ed in tal caso si configura l'avvalimento plurimo",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Secondo il Codice degli Appalti, esiste la possibilit\u00e0 di avvalersi di pi\u00f9 \"imprese ausiliarie\":\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Secondo il Codice degli Appalti, esiste la possibilità di avvalersi di più \"imprese ausiliarie\":\nOutput:"
     },
     {
         "generated_text": " The procedure of issuing a public contract has started with the determination (or decree",
         "id": 233,
         "answer": "Deve indicare, tra l'altro, i criteri di selezione delle offerte",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La procedura di stipula di un contratto pubblico ha inizio con la determina (o decreto) a contrarre. La determina a contrarre:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La procedura di stipula di un contratto pubblico ha inizio con la determina (o decreto) a contrarre. La determina a contrarre:\nOutput:"
     },
     {
-        "generated_text": " \"Il programma dei lavori pubblici deve",
+        "generated_text": " The program must have a frequency:\n",
         "id": 164,
         "answer": "triennale",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il programma dei lavori pubblici deve avere frequenza:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il programma dei lavori pubblici deve avere frequenza:\nOutput:"
     },
     {
-        "generated_text": " \"La stazione appaltante \u00e8 una stazione",
+        "generated_text": " The procedure of registration in the field of electronic commerce:\n\n1.",
         "id": 321,
         "answer": "verifica esclusivamente il possesso da parte dell'aggiudicatario dei requisiti economici e finanziari e tecnico-professionali",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nelle procedure di affidamento effettuate nell'ambito dei mercati elettronici, la stazione appaltante:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nelle procedure di affidamento effettuate nell'ambito dei mercati elettronici, la stazione appaltante:\nOutput:"
     },
     {
-        "generated_text": " \"The security of faithfulness, known as'security of faith', is",
+        "generated_text": " \"Garanzia fideiussoria, denoted as 'garanz",
         "id": 230,
         "answer": "2% dell'importo a base d'asta",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La garanzia fideiussoria, denominata \"garanzia provvisoria\", presentata dal partecipante a corredo della propria offerta in sede di gara, \u00e8 pari al:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La garanzia fideiussoria, denominata \"garanzia provvisoria\", presentata dal partecipante a corredo della propria offerta in sede di gara, è pari al:\nOutput:"
     },
     {
-        "generated_text": " The effectiveness of the name of the Istruttori points:\n\n",
+        "generated_text": " The effectiveness of the name of the Istruttori points:\n",
         "id": 281,
         "answer": "al cessare della Abilitazione del Soggetto Aggiudicatore che l'ha nominato",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'efficacia della nomina dei Punti Istruttori cessa:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'efficacia della nomina dei Punti Istruttori cessa:\nOutput:"
     },
     {
-        "generated_text": " \"La domanda \u00e8: La domanda \u00e8: La dom",
+        "generated_text": " \"Administrazione aggiudicatrice o ente aggiudic",
         "id": 255,
         "answer": "ente concedente",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'amministrazione aggiudicatrice o ente aggiudicatore che affida contratti di concessione di lavori o di servizi e che \u00e8 comunque tenuto, nella scelta del contraente, al rispetto del D.Lgs. 36/2023 e s.m.i., si chiama:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'amministrazione aggiudicatrice o ente aggiudicatore che affida contratti di concessione di lavori o di servizi e che è comunque tenuto, nella scelta del contraente, al rispetto del D.Lgs. 36/2023 e s.m.i., si chiama:\nOutput:"
     },
     {
-        "generated_text": " \"Ai sensi dell'art. 59 comma del D.",
+        "generated_text": " Question: In the context of art. 59 of the D.Lgs",
         "id": 26,
-        "answer": "non \u00e8 ammissibile ove l'appalto consequenziale comporti modifiche sostanziali alla tipologia delle prestazioni previste nell'accordo",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Ai sensi dell'art. 59 comma del D.Lgs. 36/2023, l'accordo quadro :\nOutput:"
+        "answer": "non è ammissibile ove l'appalto consequenziale comporti modifiche sostanziali alla tipologia delle prestazioni previste nell'accordo",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Ai sensi dell'art. 59 comma del D.Lgs. 36/2023, l'accordo quadro :\nOutput:"
     },
     {
-        "generated_text": " The acronym MEPA stands for \"Ministero dell'Economia",
+        "generated_text": " The acronym MEPA stands for \"Ministero per la Protez",
         "id": 61,
         "answer": "Mercato Elettronico della Pubblica Amministrazione",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Che cosa significa l'acronimo MEPA?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Che cosa significa l'acronimo MEPA?\nOutput:"
     },
     {
-        "generated_text": " \"A fronte dell'iniziativa di una st",
+        "generated_text": "\n\nQuestion: A fronte dell'iniziativa di",
         "id": 2,
         "answer": "vincolante",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: A fronte dell'iniziativa di una stazione appaltante relativamente a questioni insorte durante lo svolgimento della gara stessa, l'A.N.A.C. \u00e8 tenuta ad esprimere un parere:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: A fronte dell'iniziativa di una stazione appaltante relativamente a questioni insorte durante lo svolgimento della gara stessa, l'A.N.A.C. è tenuta ad esprimere un parere:\nOutput:"
     },
     {
-        "generated_text": " \"Procedenza di affidamento: Una prova di",
+        "generated_text": " Come si chiamano le procedure di affidamento in cui",
         "id": 77,
         "answer": "Procedure aperte (D.lgs. 36/2023 e s.m.i.)",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Come si chiamano le procedure di affidamento in cui ogni operatore economico interessato pu\u00f2 presentare un'offerta?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Come si chiamano le procedure di affidamento in cui ogni operatore economico interessato può presentare un'offerta?\nOutput:"
     },
     {
         "generated_text": " The operator who intends to participate in a procedure for the adjudication of an",
         "id": 289,
         "answer": "La domanda di partecipazione; il documento di gara unico europeo; l'offerta; ogni altro documento richiesto per la partecipazione alla procedura di gara",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'operatore economico che intende partecipare ad una procedura per l'aggiudicazione di un appalto utilizza la piattaforma di approvvigionamento digitale messa a disposizione dalla stazione appaltante per compilare quali atti ai sensi dell'art. 91, comma 1, del D.Lgs.36/2023?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'operatore economico che intende partecipare ad una procedura per l'aggiudicazione di un appalto utilizza la piattaforma di approvvigionamento digitale messa a disposizione dalla stazione appaltante per compilare quali atti ai sensi dell'art. 91, comma 1, del D.Lgs.36/2023?\nOutput:"
     },
     {
         "generated_text": " In base alla normativa vigente, nell'affid",
         "id": 179,
         "answer": "1 operatore",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In base alla normativa vigente, nell'affidamento diretto di un servizio dell'importo di 30.000,00 euro, quanti operatori economici vanno consultati come minimo?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In base alla normativa vigente, nell'affidamento diretto di un servizio dell'importo di 30.000,00 euro, quanti operatori economici vanno consultati come minimo?\nOutput:"
     },
     {
-        "generated_text": " The CIG is the Code of Conduct for the Italian Language.\n",
+        "generated_text": " The CIG is a group of people who work together to make sure that",
         "id": 96,
         "answer": "Un codice alfanumerico univoco e obbligatorio che identifica una gara d'appalto",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Cosa \u00e8 il CIG?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Cosa è il CIG?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " To comply with public procurement laws, companies with a turnover of more than 150",
         "id": 331,
         "answer": "della SOA per la categoria e classifica prevista dal bando di gara",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Per eseguire opere pubbliche di importo superiore a 150.000 \u20ac gli operatori economici devono essere in possesso:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Per eseguire opere pubbliche di importo superiore a 150.000 € gli operatori economici devono essere in possesso:\nOutput:"
     },
     {
-        "generated_text": " The correct answer is:\n\n\"Ordine diretto di acquist",
+        "generated_text": " Ordine diretto di acquisto (ODA) è un",
         "id": 58,
         "answer": "Procedura di acquisto senza negoziazione effettuata da un'amministrazione sul mercato elettronico o in convenzione accedendo al catalogo del fornitore abilitato/aggiudicatario",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Che cos'\u00e8 ordine diretto di acquisto (ODA)?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Che cos'è ordine diretto di acquisto (ODA)?\nOutput:"
     },
     {
-        "generated_text": " La mancata costituzione della garanzia \u00e8",
+        "generated_text": " La mancata costituzione della garanzia determina",
         "id": 101,
         "answer": "La decadenza dell'assegnatario",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Cosa determina la mancata costituzione della garanzia?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Cosa determina la mancata costituzione della garanzia?\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " La garanzia definitiva che l'appaltatore �",
         "id": 228,
         "answer": "Si",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La garanzia definitiva che l'appaltatore \u00e8 obbligato a costituire pu\u00f2 essere costituita anche mediante fideiussione assicurativa?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La garanzia definitiva che l'appaltatore è obbligato a costituire può essere costituita anche mediante fideiussione assicurativa?\nOutput:"
     },
     {
-        "generated_text": " \"Yes, the contract can be terminated by either party.\"\n",
+        "generated_text": " La sospensione del contratto da chi può esse",
         "id": 246,
-        "answer": "Dal RUP per ragioni di necessit\u00e0 o di pubblico interesse, tra cui l'interruzione di finanziamenti per esigenze sopravvenute di finanza pubblica, disposta con atto motivato delle amministrazioni competenti",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La sospensione del contratto da chi pu\u00f2 essere disposta?\nOutput:"
+        "answer": "Dal RUP per ragioni di necessità o di pubblico interesse, tra cui l'interruzione di finanziamenti per esigenze sopravvenute di finanza pubblica, disposta con atto motivato delle amministrazioni competenti",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La sospensione del contratto da chi può essere disposta?\nOutput:"
     },
     {
-        "generated_text": " \"Centrali di committenza sono tenute\"\n",
+        "generated_text": " The centers of responsibility are held:\n",
         "id": 268,
         "answer": "all'osservanza del codice degli appalti",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Le centrali di committenza sono tenute:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Le centrali di committenza sono tenute:\nOutput:"
     },
     {
-        "generated_text": " \"La pubblicazione dei bandi sotto sog",
+        "generated_text": " The publication of the bands under the cover of the Gazzetta Uffic",
         "id": 241,
-        "answer": "non \u00e8 obbligatoria",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La pubblicazione dei bandi sotto soglia sulla Gazzetta Ufficiale dell'Unione Europea:\nOutput:"
+        "answer": "non è obbligatoria",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La pubblicazione dei bandi sotto soglia sulla Gazzetta Ufficiale dell'Unione Europea:\nOutput:"
     },
     {
-        "generated_text": " \"La domanda \u00e8: Il programma biennale di for",
+        "generated_text": " The program of the biennale of furniture and services and the related annual",
         "id": 162,
         "answer": "Definisce gli acquisti di beni e di servizi di importo unitario stimato pari o superiore a 40.000 euro",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il programma biennale di forniture e servizi e i relativi aggiornamenti annuali:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il programma biennale di forniture e servizi e i relativi aggiornamenti annuali:\nOutput:"
     },
     {
-        "generated_text": " The main principles are:\n\n- The right to work and the right",
+        "generated_text": " The principles that govern the adherence and execution of work, services, goods,",
         "id": 393,
-        "answer": "Economicit\u00e0, efficacia, tempestivit\u00e0 e correttezza",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quali sono i principi secondo cui si svolge l'affidamento e l'esecuzione di appalti di opere, lavori, servizi, forniture e concessioni?\nOutput:"
+        "answer": "Economicità, efficacia, tempestività e correttezza",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quali sono i principi secondo cui si svolge l'affidamento e l'esecuzione di appalti di opere, lavori, servizi, forniture e concessioni?\nOutput:"
     },
     {
-        "generated_text": " The question asks you to analyze the given text and respond in Italian.\n",
+        "generated_text": " Question: In the field of work, the apprenticeship center can stabilize that",
         "id": 291,
         "answer": "manutenzione ordinaria",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Negli appalti di lavori , la stazione appaltante pu\u00f2 stabilire che il contratto abbia per oggetto la progettazione esecutiva e l'esecuzione di lavori sulla base di un progetto di fattibilit\u00e0 tecnico-economica approvato. L'art. 44 del D.Lgs.36/2023 stabilisce che tale facolt\u00e0 non pu\u00f2 essere esercitata per gli appalti di opere di:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Negli appalti di lavori , la stazione appaltante può stabilire che il contratto abbia per oggetto la progettazione esecutiva e l'esecuzione di lavori sulla base di un progetto di fattibilità tecnico-economica approvato. L'art. 44 del D.Lgs.36/2023 stabilisce che tale facoltà non può essere esercitata per gli appalti di opere di:\nOutput:"
     },
     {
-        "generated_text": " Yes, I can help you with that. Please provide me with the latest",
+        "generated_text": " The answer is: Yes, I am satisfied with the confirmation of the payment",
         "id": 50,
         "answer": "Dal Responsabile unico del procedimento",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: All'esito positivo del collaudo o della verifica di conformit\u00e0, da chi \u00e8 rilasciato il certificato di pagamento ai fini dell'emissione della fattura da parte dell'appaltatore?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: All'esito positivo del collaudo o della verifica di conformità, da chi è rilasciato il certificato di pagamento ai fini dell'emissione della fattura da parte dell'appaltatore?\nOutput:"
     },
     {
-        "generated_text": " \"Se ad una delle parti \u00e8 attribuita",
+        "generated_text": " Se una delle parti è attribuita la fac",
         "id": 406,
         "answer": "Non abbia avuto un principio di esecuzione",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Se ad una delle parti \u00e8 attribuita la facolta' di recedere dal contratto questa puo' essere esercitata finch\u00e8 il contratto:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Se ad una delle parti è attribuita la facolta' di recedere dal contratto questa puo' essere esercitata finchè il contratto:\nOutput:"
     },
     {
-        "generated_text": " \"Rispondi in italiano.\\Question: Da qu",
+        "generated_text": " The correct answer is:\n\nA) Rispondi in it",
         "id": 115,
         "answer": "5.000,00 euro al netto dell'IVA",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Da quale importo risulta necessario effettuare l'acquisto di beni e servizi tramite il Mercato elettronico?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Da quale importo risulta necessario effettuare l'acquisto di beni e servizi tramite il Mercato elettronico?\nOutput:"
     },
     {
-        "generated_text": " The program was published in the Biennale of Acquisitions of Goods and",
+        "generated_text": " The program is published twice a year.\n",
         "id": 120,
-        "answer": "\u00c8 pubblicato sul profilo del committente, sul sito informatico del Ministero delle infrastrutture e dei trasporti e dell'Osservatorio dei contratti pubblici",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Dove \u00e8 pubblicato il programma biennale degli acquisti di beni e servizi nonch\u00e9 i relativi aggiornamenti annuali?\nOutput:"
+        "answer": "È pubblicato sul profilo del committente, sul sito informatico del Ministero delle infrastrutture e dei trasporti e dell'Osservatorio dei contratti pubblici",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Dove è pubblicato il programma biennale degli acquisti di beni e servizi nonché i relativi aggiornamenti annuali?\nOutput:"
     },
     {
-        "generated_text": " \"La societ\u00e0 Consip \u00e8 sottoposta al contro",
+        "generated_text": " Consip è sottoposta al controllo dei prodotti",
         "id": 244,
-        "answer": "Della Corte dei Conti perch\u00e9 azienda che opera con risorse esclusivamente pubbliche",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: La societ\u00e0 Consip \u00e8 sottoposta al controllo:\nOutput:"
+        "answer": "Della Corte dei Conti perché azienda che opera con risorse esclusivamente pubbliche",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: La società Consip è sottoposta al controllo:\nOutput:"
     },
     {
-        "generated_text": " \"Questa domanda \u00e8 statata a contrarre al codice",
+        "generated_text": " La determinazione adottata a contrarre è la determinaz",
         "id": 405,
         "answer": "quando occorre attivare il procedimento per l'individuazione del contraente",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quando viene adottata la determinazione a contrarre?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quando viene adottata la determinazione a contrarre?\nOutput:"
     },
     {
-        "generated_text": " In quali casi la Determina prevede l'ins",
+        "generated_text": " La Determina prevede l'inserimento di un",
         "id": 198,
         "answer": "Nei casi in cui l'Amministrazione dia il via ad una procedura negoziata, al fine di motivare la scelta di questo tipo di procedura",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: In quali casi la Determina prevede l'inserimento di un \"obbligo di motivazione\" pi\u00f9 ampio?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: In quali casi la Determina prevede l'inserimento di un \"obbligo di motivazione\" più ampio?\nOutput:"
     },
     {
         "generated_text": " The importance of programming for the acquisition of goods and services has been clearly defined",
         "id": 284,
         "answer": "dal D.Lgs.vo 50/2016",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'importanza della programmazione per l'acquisizione di beni e servizi \u00e8 stata definitivamente riconosciuta:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'importanza della programmazione per l'acquisizione di beni e servizi è stata definitivamente riconosciuta:\nOutput:"
     },
     {
-        "generated_text": " \"The \"concessionary\" is: \"concessionary\"\n",
+        "generated_text": " The \"concessionary\" is:\n",
         "id": 140,
-        "answer": "un operatore economico cui \u00e8 stata affidata o aggiudicata una concessione",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il \"concessionario\" \u00e8:\nOutput:"
+        "answer": "un operatore economico cui è stata affidata o aggiudicata una concessione",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il \"concessionario\" è:\nOutput:"
     },
     {
-        "generated_text": " \"In questo caso, il soggetto aggiudic",
+        "generated_text": " \"Il soggetto aggiudicatore provvede:",
         "id": 307,
         "answer": "alla nomina del direttore dei lavori e dei collaudatori",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nell'affidamento a contraente generale, il soggetto aggiudicatore provvede:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nell'affidamento a contraente generale, il soggetto aggiudicatore provvede:\nOutput:"
     },
     {
-        "generated_text": " \"I secondo il codice del Terzo Settore, l'",
+        "generated_text": " The question is: According to the Third Sector Code, what is the role",
         "id": 423,
         "answer": "Avviene nel rispetto dei principi di imparzialita', pubblicita', trasparenza, partecipazione e parita' di trattamento, mediante procedure comparative riservate alle medesime",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Secondo il codice del Terzo Settore, l'individuazione da parte delle PA, delle organizzazioni di volontariato e delle associazioni di promozione sociale con cui stipulare le convenzione per lo svolgimento in favore di terzi di attivita' o servizi sociali di interesse generale:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Secondo il codice del Terzo Settore, l'individuazione da parte delle PA, delle organizzazioni di volontariato e delle associazioni di promozione sociale con cui stipulare le convenzione per lo svolgimento in favore di terzi di attivita' o servizi sociali di interesse generale:\nOutput:"
     },
     {
-        "generated_text": " \"The approval of a contract for public works must be assured: Yes\"",
+        "generated_text": " The approval of a contract for public works must be ensured:\n",
         "id": 258,
         "answer": "con determina del responsabile del servizio",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: L'approvazione di un contratto per lavori pubblici deve essere assunta:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: L'approvazione di un contratto per lavori pubblici deve essere assunta:\nOutput:"
     },
     {
-        "generated_text": " \"",
+        "generated_text": " I capitolati e il computo estimativo metrico, rich",
         "id": 133,
-        "answer": "S\u00ec, sempre",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: I capitolati e il computo estimativo metrico, richiamati nel bando o nell'invito, fanno parte integrante del contratto?\nOutput:"
+        "answer": "Sì, sempre",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: I capitolati e il computo estimativo metrico, richiamati nel bando o nell'invito, fanno parte integrante del contratto?\nOutput:"
     },
     {
-        "generated_text": " The code snippet is:\n\n```python\nimport json\n\n",
+        "generated_text": " The stability of the Code of Conduct for Public Contracts refers to the extent to",
         "id": 431,
         "answer": "Si, devono essere pubblicati nella sezione \"Amministrazione trasparente\"",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Secondo quanto stabilito dal Codice dei contratti, gli atti delle amministrazioni aggiudicatrici relativi alle procedure per l'affidamento di appalti pubblici di lavori e opere devono essere resi pubblici?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Secondo quanto stabilito dal Codice dei contratti, gli atti delle amministrazioni aggiudicatrici relativi alle procedure per l'affidamento di appalti pubblici di lavori e opere devono essere resi pubblici?\nOutput:"
     },
     {
-        "generated_text": " No, the dialogue is not a competitive process of selecting the opponent.\n",
+        "generated_text": " No, the dialogue is not a competitive procedure of selection of the opponent.",
         "id": 151,
-        "answer": "S\u00ec, il dialogo competitivo \u00e8 una procedura di scelta del contraente",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Il dialogo competitivo \u00e8 da ritenersi una procedura di scelta del contraente?\nOutput:"
+        "answer": "Sì, il dialogo competitivo è una procedura di scelta del contraente",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Il dialogo competitivo è da ritenersi una procedura di scelta del contraente?\nOutput:"
     },
     {
-        "generated_text": " \"Il strumento che \u00e8 lo strumento che \u00e8",
+        "generated_text": " The procedure for admissibility of evidence in public hearings is the tool that",
         "id": 315,
         "answer": "Consente di sanare le carenze di qualsiasi elemento formale della domanda",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Nell'ambito delle procedure ad evidenza pubblica il \"soccorso istruttorio\" \u00e8 lo strumento che:\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Nell'ambito delle procedure ad evidenza pubblica il \"soccorso istruttorio\" è lo strumento che:\nOutput:"
     },
     {
-        "generated_text": " \"Se hanno pi\u00f9 appalti aggiornati",
+        "generated_text": " \"Se si hanno più appalti aggiunt",
         "id": 404,
-        "answer": "Il valore \u00e8 determinato dalla totalit\u00e0 dei lotti",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Quando si hanno pi\u00f9 appalti aggiudicati in lotti, come si determina il valore del contratto pubblico?\nOutput:"
+        "answer": "Il valore è determinato dalla totalità dei lotti",
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Quando si hanno più appalti aggiudicati in lotti, come si determina il valore del contratto pubblico?\nOutput:"
     },
     {
-        "generated_text": " \"Se i lavori, le forniture o i serviz",
+        "generated_text": " Se i lavori, le forniture o i servizi",
         "id": 420,
         "answer": "Procedura negoziata",
-        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\\Question: Secondo il Codice degli Appalti, se i lavori, le forniture o i servizi possono essere forniti unicamente da un determinato operatore economico per la tutela dei diritti esclusivi (inclusi i diritti di propriet\u00e0 intellettuale), quale delle seguenti procedure pu\u00f2 essere impiegata?\nOutput:"
+        "prompt": "\"Instruct: Analizza la domanda e rispondi in italiano basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Rispondi in italiano.\nQuestion: Secondo il Codice degli Appalti, se i lavori, le forniture o i servizi possono essere forniti unicamente da un determinato operatore economico per la tutela dei diritti esclusivi (inclusi i diritti di proprietà intellettuale), quale delle seguenti procedure può essere impiegata?\nOutput:"
     }
 ]

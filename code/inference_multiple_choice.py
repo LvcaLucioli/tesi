@@ -103,7 +103,7 @@ def load_mutliple_choice_dataset():
                 }
         elif "zephyr" in generation_arguments.model_name:
             inputs = {
-            "text" : f'''"<|system|>\nAnalizza la domanda e le possibili opzioni di risposta e seleziona l'opzione corretta basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Scrivi solo una tra le lettere 'a', 'b', 'c', 'd'.</s>\n<|user|>\n{qa["question"]}\n{qa["options"]}</s>\n<|assistant|>\n''',    
+            "text" : f'''"<|system|>\nAnalizza la domanda e le possibili opzioni di risposta e scrivi la lettera corrispondente all'opzione di risposta corretta basandoti sugli ultimi aggiornamenti del codice degli appalti italiano. Scrivi solo una tra le lettere 'a', 'b', 'c', 'd'.</s>\n<|user|>\n{qa["question"]}\n{qa["options"]}</s>\n<|assistant|>\n''',    
                 "answer" : qa["correct_option"],
                 "id" : qa["id"],
                 }
