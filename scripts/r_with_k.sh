@@ -54,3 +54,7 @@ CUDA_VISIBLE_DEVICES=2 python3 r_with_k.py \
     --model_name "google/flan-t5-large" \
     --predictions_path "./predictions/flan-t5-large_base_question-answering_2_8_20.json" \
     --encoder_name "dlicari/lsg16k-Italian-Legal-BERT"
+
+
+    --model_name "lvcalucioli/zephyr-7b-beta_multiple-choice_merged" \
+    --predictions_path "../predictions/zephyr_finetuned_mutliple_choice_on_multiple_choice_8_8_123.json" \
