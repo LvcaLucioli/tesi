@@ -1,3 +1,7 @@
+# Large Language Model per Dataset Giuridici Italiani: Esperimenti con Prompting, Retrieval-Augmented Generation e Fine-Tuning
+
+## How to replicate tests
+
 Run scripts in `scripts` folder to performe the fine-tuning of the models.
 Run inference scripts in the same folder to make the model predict answers to the questions in the test split of the datasets.
 The accuracy evaluation on multiple-choice predictions can be done with the script `evaluate_accuracy.sh`.
