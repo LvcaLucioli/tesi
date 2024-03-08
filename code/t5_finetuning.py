@@ -138,7 +138,7 @@ class QA_Dataset(Dataset):
 #     return predicted_answer
 
 def load_qna_dataset():
-    path = "./datasets/CdA-mininterno-quiz_dataset.csv"
+    path = "../datasets/CdA-mininterno-quiz_dataset.csv"
 
     df = pd.read_csv(path)
 
@@ -165,7 +165,7 @@ def load_qna_dataset():
     
 
 def load_syntetic_dataset():
-    path = "ca_synthetic_qa_dataset.csv"
+    path = "../datasets/ca_synthetic_qa_dataset.csv"
 
     df = pd.read_csv(path)
 
@@ -189,7 +189,7 @@ def load_syntetic_dataset():
 
 
 def load_mutliple_choice_dataset():
-    path = "./datasets/CA_dataset_w_options.csv"
+    path = "../datasets/CA_dataset_w_options.csv"
 
     df = pd.read_csv(path)
     df = df.rename(columns={
@@ -247,7 +247,7 @@ def main():
         
         
     dataset = Dataset.from_dict(dataset.to_dict(orient='list'))
-    dataset = dataset.train_test_split(test_size=0.2)
+    dataset = dataset.train_test_split(test_size=0.3)
     
     tokenizer = AutoTokenizer.from_pretrained(finetuning_arguments.model_name)
     model = AutoModelForSeq2SeqLM.from_pretrained(finetuning_arguments.model_name, 
@@ -303,14 +303,16 @@ def main():
 
     trainer.train()
     
-    trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
+    # trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     
+    trainer.model.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
+    trainer.tokenizer.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     log = {
         "datetime" : datetime.now().isoformat(),
         "model_name" : finetuning_arguments.new_model_name,
     }
     
-    with open('./logs/logs.json', 'a') as file:
+    with open('../logs/logs.json', 'a') as file:
         json.dump(log, file, indent=4)
         
 if __name__ == "__main__":main()

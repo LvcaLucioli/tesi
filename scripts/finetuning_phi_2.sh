@@ -37,15 +37,15 @@
 #     --top_k 20 \
 #     --num_beams 2
 
-CUDA_VISIBLE_DEVICES=2 python3 phi_supervised_finetuning.py \
+CUDA_VISIBLE_DEVICES=2 python3 ../code/phi_supervised_finetuning.py \
     --model_name "microsoft/phi-2" \
     --new_model_name "phi2_linear" \
     --first_n 0 \
-    --num_train_epochs 2 \
-    --per_device_eval_batch_size 2 \
+    --num_train_epochs 10 \
+    --per_device_eval_batch_size 4 \
     --per_device_train_batch_size 2 \
     --learning_rate 2e-4 \
-    --training_task "syntetic-question-answering" \
+    --training_task "question-answering" \
     # --layers '["v_proj", "k_proj", "q_proj", "q_proj"]'
 
 # CUDA_VISIBLE_DEVICES=2 python3 merge_model.py \

@@ -4,7 +4,9 @@ import ast
 from transformers import (pipeline,
                           HfArgumentParser,
                           AutoTokenizer,
-                          AutoModelForCausalLM)
+                          AutoModelForCausalLM,
+                          AutoModelForSeq2SeqLM,
+                          )
 from typing import Optional
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -53,16 +55,16 @@ def load_dataset():
 
 def create_context(ds_row, k):
     context = """
-    Sei un esperto giurista italiano. Rispondi correttamente in italiano alle domande sul contenuto del Codice degli Appalti.
+    Instruct: Sei un esperto giurista italiano. Rispondi correttamente in italiano alle domande sul contenuto del Codice degli Appalti.
     Rispondi in maniera diretta e chiara. Fai riferimento alla tua conoscenza e alle informazioni di contesto fornite.
 
-    ## Contesto:
+    Contesto:
     {context}
 
-    ## Domanda:
+    Domanda:
     {question}
 
-    ## Risposta:
+    Output:
     """
 
     q = ds_row['question']
@@ -80,8 +82,13 @@ def generate(inputs, dataset):
     # start_predictions = "## Risposta:"
     tokenizer = AutoTokenizer.from_pretrained(generation_arguments.model_name,
                                               padding_side="left")
-    model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
-                                                 low_cpu_mem_usage=True)
+    if "flan" in generation_arguments.model_name:
+        model = AutoModelForSeq2SeqLM.from_pretrained(generation_arguments.model_name)
+    else:
+        model = AutoModelForCausalLM.from_pretrained(generation_arguments.model_name,
+                                                 low_cpu_mem_usage=True,
+                                                #  ignore_mismatched_sizes=True,
+                                                 )
     model.config.pad_token_id = model.config.eos_token_id
     pipe = pipeline(generation_arguments.task, 
                     model=model,
@@ -101,13 +108,18 @@ def generate(inputs, dataset):
     i = 0
     result = []
     for pred in out:
-        pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_predictions) + len(generation_arguments.start_predictions):] 
+        # if "zephyr" in generation_arguments.model_name:
+        #     generated_text = pred["generated_text"][pred["generated_text"].find(generation_arguments.start_predictions) + len(generation_arguments.start_predictions):] 
+        if "flan" not in generation_arguments.model_name:
+            generated_text = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_predictions) + len(generation_arguments.start_predictions):] 
+        else:
+            generated_text = pred["generated_text"]
         result.append({
             "id" : int(dataset["question_id"][i]),
             "question" : dataset["question"][i],
             "retrieval_data" : dataset["retrieval_data"][i],
             "answer" : dataset["answer"][i],
-            "generated_text" : pred[0]["generated_text"],
+            "generated_text" : generated_text,
         })
         i = i + 1
         

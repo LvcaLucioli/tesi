@@ -90,30 +90,30 @@
 #     --num_beams 2
 
 
-CUDA_VISIBLE_DEVICES=2 python3 ../code/zephyr_finetuning.py \
-    --model_name "HuggingFaceH4/zephyr-7b-beta" \
-    --new_model_name "zephyr-7b-beta" \
-    --first_n 0 \
-    --num_train_epochs 5 \
-    --per_device_eval_batch_size 4 \
-    --per_device_train_batch_size 16 \
-    --learning_rate 2e-4 \
-    --training_task "multiple-choice" \
-    --sample 5 \
-    --temperature 0.8 \
-    --top_p 0.6 \
-    --top_k 20 \
-    --num_beams 2
-
 # CUDA_VISIBLE_DEVICES=2 python3 ../code/zephyr_finetuning.py \
 #     --model_name "HuggingFaceH4/zephyr-7b-beta" \
 #     --new_model_name "zephyr-7b-beta" \
 #     --first_n 0 \
-#     --num_train_epochs 10 \
+#     --num_train_epochs 5 \
 #     --per_device_eval_batch_size 4 \
-#     --per_device_train_batch_size 4 \
+#     --per_device_train_batch_size 16 \
 #     --learning_rate 2e-4 \
-#     --training_task "self-supervised" \
+#     --training_task "multiple-choice" \
+#     --sample 5 \
+#     --temperature 0.8 \
+#     --top_p 0.6 \
+#     --top_k 20 \
+#     --num_beams 2
+
+CUDA_VISIBLE_DEVICES=2 python3 ../code/zephyr_finetuning.py \
+    --model_name "HuggingFaceH4/zephyr-7b-beta" \
+    --new_model_name "zephyr-7b-beta_10ep" \
+    --first_n 0 \
+    --num_train_epochs 10 \
+    --per_device_eval_batch_size 4 \
+    --per_device_train_batch_size 4 \
+    --learning_rate 2e-4 \
+    --training_task "self-supervised" \
 
 # CUDA_VISIBLE_DEVICES=2 python3 inference_question_answering.py \
 #     --model_name "lvcalucioli/zephyr-7b-beta_question-answering_merged" \

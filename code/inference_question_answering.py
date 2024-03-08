@@ -195,6 +195,7 @@ def generate_preds(dataset):
                     "answer" : dataset["test"]["answer"][i],
                     "prompt" : dataset["test"]["text"][i]})
         else:
+            print(pred[0]["generated_text"])
             pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_prediction) + len(generation_arguments.start_prediction):] 
             print(pred[0]["generated_text"])
             end_idx = pred[0]["generated_text"].find(generation_arguments.end_prediction)

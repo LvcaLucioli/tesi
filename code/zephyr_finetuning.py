@@ -1,7 +1,3 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 from datasets import Dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -27,12 +23,8 @@ import accelerate
 import bitsandbytes as bnb
 from dataclasses import dataclass, field
 from typing import Optional
-import chromadb
-import random
 import numpy as np
 import nltk
-import evaluate
-import re
 from datetime import datetime
 
 nltk.download("punkt", quiet=True)
@@ -312,19 +304,19 @@ def main():
             # num_of_sequences=2
         )
     
-    trainer.train()
+    # trainer.train()
     
     
-    trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
+    # trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     
-    peft_model = AutoPeftModelForCausalLM.from_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
+    # peft_model = AutoPeftModelForCausalLM.from_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
 
-    merged_model = peft_model.merge_and_unload() 
+    # merged_model = peft_model.merge_and_unload() 
 
-    tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    # tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
     
-    merged_model.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged', use_temp_dir=False, safe_serialization=True)
-    tokenizer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    # merged_model.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged', use_temp_dir=False, safe_serialization=True)
+    # tokenizer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
     
     # merged_model.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
     # tokenizer.save_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')

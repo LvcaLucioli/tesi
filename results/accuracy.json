@@ -206,4 +206,104 @@
     "accuracy score": 0.03296703296703297,
     "model_name": "HuggingFaceH4/zephyr-7b-beta",
     "datetime": "2024-02-26T23:53:30.098216"
+}{
+    "accuracy score": 0.01098901098901099,
+    "model_name": "lvcalucioli/zephyr-7b-beta_self-supervised_merged",
+    "datetime": "2024-02-27T13:43:21.154402"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-27T13:43:23.358462"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-27T13:43:25.393398"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/zephyr-7b-beta_self-supervised_merged",
+    "datetime": "2024-02-27T14:07:05.927137"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/zephyr-7b-beta_multiple_choice_merged",
+    "datetime": "2024-02-27T14:07:08.109289"
+}{
+    "accuracy score": 0.03296703296703297,
+    "model_name": "HuggingFaceH4/zephyr-7b-beta",
+    "datetime": "2024-02-27T14:07:10.335876"
+}{
+    "accuracy score": 0.18681318681318682,
+    "model_name": "lvcalucioli/llamantino7b_2_multiple-choice_merged",
+    "datetime": "2024-02-27T15:48:22.734752"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "lvcalucioli/llamantino7b_2_question-answering_merged",
+    "datetime": "2024-02-27T15:48:24.919423"
+}{
+    "accuracy score": 0.10989010989010989,
+    "model_name": "lvcalucioli/llamantino7b_2_2_syntetic-question-answering_merged",
+    "datetime": "2024-02-27T15:48:27.213800"
+}{
+    "accuracy score": 0.0989010989010989,
+    "model_name": "swap-uniba/LLaMAntino-2-7b-hf-ITA",
+    "datetime": "2024-02-27T15:48:29.489328"
+}{
+    "accuracy score": 0.15384615384615385,
+    "model_name": "microsoft/phi-2",
+    "datetime": "2024-02-27T17:13:45.207844"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_question-answering_merged",
+    "datetime": "2024-02-27T17:13:47.533637"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_multiple-choice_merged",
+    "datetime": "2024-02-27T17:13:49.792675"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-27T17:19:40.467901"
+}{
+    "accuracy score": 0.8461538461538461,
+    "model_name": "lvcalucioli/flan-t5-large__multiple-choice",
+    "datetime": "2024-02-27T20:20:15.877371"
+}{
+    "accuracy score": 0.2967032967032967,
+    "model_name": "lvcalucioli/zephyr-7b-beta_10ep_self-supervised_merged",
+    "datetime": "2024-02-28T03:37:12.724721"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_linear_syntetic-question-answering_merged",
+    "datetime": "2024-02-28T15:06:31.868564"
+}{
+    "accuracy score": 0.21978021978021978,
+    "model_name": "lvcalucioli/phi2_linear_question-answering_merged",
+    "datetime": "2024-02-28T20:09:51.365410"
+}{
+    "accuracy score": 0.0,
+    "model_name": "lvcalucioli/flan-t5-large__syntetic-question-answering",
+    "datetime": "2024-02-28T20:46:53.034744"
+}{
+    "accuracy score": 0.43956043956043955,
+    "model_name": "flan-t5-large_question-answering",
+    "datetime": "2024-02-28T21:43:56.993551"
+}{
+    "accuracy score": 0.8351648351648352,
+    "model_name": "flan-t5-large_multiple-choice",
+    "datetime": "2024-02-28T22:22:04.741229"
+}{
+    "accuracy score": 0.43956043956043955,
+    "model_name": "flan-t5-large_question-answering",
+    "datetime": "2024-02-28T22:22:06.937329"
+}{
+    "accuracy score": 0.8351648351648352,
+    "model_name": "flan-t5-large_multiple-choice",
+    "datetime": "2024-02-28T22:29:13.975383"
+}{
+    "accuracy score": 0.43956043956043955,
+    "model_name": "flan-t5-large_question-answering",
+    "datetime": "2024-02-28T22:29:16.178963"
+}{
+    "accuracy score": 0.4065934065934066,
+    "model_name": "google/flan-t5-large",
+    "datetime": "2024-02-28T22:29:18.258671"
 }

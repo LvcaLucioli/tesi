@@ -1,8 +1,3 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
-
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 from peft import (LoraConfig,
                   PeftModel,
@@ -61,7 +56,7 @@ class FinetuneArguments:
     
 
 def load_syntetic_dataset(n):
-    path = "./datasets/ca_synthetic_qa_dataset.csv"
+    path = "../datasets/ca_synthetic_qa_dataset.csv"
 
     df = pd.read_csv(path)
 
@@ -89,7 +84,7 @@ def load_syntetic_dataset(n):
         return pd.DataFrame(new_dataset)[:n]
 
 def load_mutliple_choice_dataset(n):
-    path = "./datasets/CA_dataset_w_options.csv"
+    path = "../datasets/CA_dataset_w_options.csv"
 
     df = pd.read_csv(path)
     df = df.rename(columns={
@@ -114,7 +109,7 @@ def load_mutliple_choice_dataset(n):
         return pd.DataFrame(new_dataset)[:n]
        
 def load_qna_dataset(n):
-    path = "./datasets/CdA-mininterno-quiz_dataset.csv"
+    path = "../datasets/CdA-mininterno-quiz_dataset.csv"
     df = pd.read_csv(path)
     
     df = df.drop(columns=['Tipo-Domanda'])
@@ -148,8 +143,8 @@ def find_all_linear_names(model):
             names = name.split('.')
             lora_module_names.add(names[0] if len(names) == 1 else names[-1])
 
-    # if 'lm_head' in lora_module_names:
-    #     lora_module_names.remove('lm_head')
+    if 'lm_head' in lora_module_names:
+        lora_module_names.remove('lm_head')
     return list(lora_module_names)
 
 def main():
@@ -263,13 +258,13 @@ def main():
     
     trainer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
     
-    peft_model = AutoPeftModelForCausalLM.from_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
+    # peft_model = AutoPeftModelForCausalLM.from_pretrained(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}')
 
-    merged_model = peft_model.merge_and_unload() 
-    tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    # merged_model = peft_model.merge_and_unload() 
     
-    merged_model.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
-    tokenizer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    # tokenizer = AutoTokenizer.from_pretrained(f'''{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}''')
+    # merged_model.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
+    # tokenizer.push_to_hub(f'{finetuning_arguments.new_model_name}_{finetuning_arguments.training_task}_merged')
     
     log = {
         "datetime" : datetime.now().isoformat(),
@@ -277,7 +272,7 @@ def main():
         "layers" : layers
     }
     
-    with open('./logs/logs.json', 'a') as file:
+    with open('../logs/logs.json', 'a') as file:
         json.dump(log, file, indent=4)
 
 if __name__ == "__main__":main()

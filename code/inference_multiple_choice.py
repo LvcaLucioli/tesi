@@ -97,7 +97,7 @@ def load_mutliple_choice_dataset():
                 }
         elif "flan" in generation_arguments.model_name:
             inputs = {
-                "text" : f''''\nDomanda: {qa["question"]}\n\nOPZIONI:{qa["options"]}\n\nRisposta: ''',  
+                "text" : f''''\nDomanda: {qa["question"]}\n\nOPZIONI:{qa["options"]}\n\nOpzione corretta: ''',  
                 "answer" : qa["correct_option"],
                 "id" : qa["id"],
                 }
@@ -198,6 +198,7 @@ def generate_preds(dataset):
         print(f'''generation: {i}''')
         pred = pipe(instance)
         if "flan" in generation_arguments.model_name:
+            print(pred[0]["generated_text"])
             pred[0]["generated_text"] = extract_letter(pred[0]["generated_text"])
             print(pred[0]["generated_text"])
             preds.append({
@@ -206,10 +207,11 @@ def generate_preds(dataset):
                     "answer" : dataset["test"]["answer"][i],
                     "prompt" : dataset["test"]["text"][i]})
         else:    
+            
             pred[0]["generated_text"] = pred[0]["generated_text"][pred[0]["generated_text"].find(generation_arguments.start_prediction) + len(generation_arguments.start_prediction):] 
             print(f'''generated_text before: {pred[0]["generated_text"]}''')
             pred[0]["generated_text"] = extract_letter(pred[0]["generated_text"])
-            print(f'''generated_text after: {pred[0]["generated_text"]}''')
+            # print(f'''generated_text after: {pred[0]["generated_text"]}''')
             end_idx = pred[0]["generated_text"].find(generation_arguments.end_prediction)
             if end_idx == -1:
                 preds.append({

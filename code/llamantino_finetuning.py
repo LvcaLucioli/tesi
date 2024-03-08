@@ -70,7 +70,7 @@ class FinetuneArguments:
 
     
 def load_qna_dataset(n):
-    path = "./datasets/CdA-mininterno-quiz_dataset.csv"
+    path = "../datasets/CdA-mininterno-quiz_dataset.csv"
     df = pd.read_csv(path)
     
     df = df.drop(columns=['Tipo-Domanda'])
@@ -96,7 +96,7 @@ def load_qna_dataset(n):
         return pd.DataFrame(new_dataset)[:n]
     
 def load_syntetic_dataset(n):
-    path = "./datasets/ca_synthetic_qa_dataset.csv"
+    path = "../datasets/ca_synthetic_qa_dataset.csv"
 
     df = pd.read_csv(path)
 
@@ -124,7 +124,7 @@ def load_syntetic_dataset(n):
         return pd.DataFrame(new_dataset)[:n]
 
 def load_mutliple_choice_dataset(n):
-    path = "./datasets/CA_dataset_w_options.csv"
+    path = "../datasets/CA_dataset_w_options.csv"
 
     df = pd.read_csv(path)
     df = df.rename(columns={

@@ -8,14 +8,24 @@
 #     --training_task "multiple-choice" \
 #     --sample 1
 
-CUDA_VISIBLE_DEVICES=2 python3 t5_finetuning.py \
+# CUDA_VISIBLE_DEVICES=2 python3 ../code/t5_finetuning.py \
+#     --model_name "google/flan-t5-large" \
+#     --new_model_name "flan-t5-large" \
+#     --num_train_epochs 8 \
+#     --per_device_train_batch_size 1 \
+#     --learning_rate 5e-5 \
+#     --training_task "question-answering" \
+#     --sample 1
+
+CUDA_VISIBLE_DEVICES=2 python3 ../code/t5_finetuning.py \
     --model_name "google/flan-t5-large" \
-    --new_model_name "flan-t5-large_" \
-    --num_train_epochs 8 \
-    --per_device_train_batch_size 1 \
+    --new_model_name "flan-t5-large" \
+    --num_train_epochs 5 \
+    --per_device_train_batch_size 8 \
     --learning_rate 5e-5 \
-    --training_task "question-answering" \
+    --training_task "multiple-choice" \
     --sample 1
+
 
 # CUDA_VISIBLE_DEVICES=2 python3 t5_finetuning.py \
 #     --model_name "google/flan-t5-large" \

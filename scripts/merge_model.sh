@@ -1,5 +1,5 @@
 #!/bin/bash
 CUDA_VISIBLE_DEVICES=2 python3 ../code/merge_model.py \
-    --base_model "HuggingFaceH4/zephyr-7b-beta" \
-    --peft_model "lvcalucioli/zephyr-7b-beta_self-supervised" \
+    --base_model "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
+    --peft_model "lvcalucioli/llamantino7b_2_question-answering" \
 

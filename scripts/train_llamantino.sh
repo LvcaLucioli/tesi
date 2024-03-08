@@ -14,35 +14,35 @@
     # --top_k 20 \
     # --num_beams 2
 
-CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
-    --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
-    --new_model_name "llamantino7b_2_2" \
-    --first_n 0 \
-    --num_train_epochs 2 \
-    --per_device_eval_batch_size 4 \
-    --per_device_train_batch_size 4 \
-    --learning_rate 2e-4 \
-    --training_task "syntetic-question-answering" \
-    --sample 1 \
-    --temperature 0.5 \
-    --top_p 0.8 \
-    --top_k 20 \
-    --num_beams 2
+# CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
+#     --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
+#     --new_model_name "llamantino7b_2_2" \
+#     --first_n 0 \
+#     --num_train_epochs 2 \
+#     --per_device_eval_batch_size 4 \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 2e-4 \
+#     --training_task "syntetic-question-answering" \
+#     --sample 1 \
+#     --temperature 0.5 \
+#     --top_p 0.8 \
+#     --top_k 20 \
+#     --num_beams 2
 
-CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
-    --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
-    --new_model_name "llamantino7b_2_2" \
-    --first_n 0 \
-    --num_train_epochs 3 \
-    --per_device_eval_batch_size 4 \
-    --per_device_train_batch_size 4 \
-    --learning_rate 2e-4 \
-    --training_task "syntetic-question-answering" \
-    --sample 1 \
-    --temperature 0.5 \
-    --top_p 0.8 \
-    --top_k 20 \
-    --num_beams 2
+# CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
+#     --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
+#     --new_model_name "llamantino7b_2_2" \
+#     --first_n 0 \
+#     --num_train_epochs 3 \
+#     --per_device_eval_batch_size 4 \
+#     --per_device_train_batch_size 4 \
+#     --learning_rate 2e-4 \
+#     --training_task "syntetic-question-answering" \
+#     --sample 1 \
+#     --temperature 0.5 \
+#     --top_p 0.8 \
+#     --top_k 20 \
+#     --num_beams 2
 
 # python3 llamantino_finetuning.py \
 #     --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
@@ -59,20 +59,20 @@ CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
 #     --top_k 20 \
 #     --num_beams 2
 
-# CUDA_VISIBLE_DEVICES=2 python3 llamantino_finetuning.py \
-#     --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
-#     --new_model_name "llamantino7b_2" \
-#     --first_n 0 \
-#     --num_train_epochs 12 \
-#     --per_device_eval_batch_size 16 \
-#     --per_device_train_batch_size 16 \
-#     --learning_rate 2e-4 \
-#     --training_task "question-answering" \
-#     --sample 1 \
-#     --temperature 0.8 \
-#     --top_p 0.6 \
-#     --top_k 20 \
-#     --num_beams 2
+CUDA_VISIBLE_DEVICES=2 python3 ../code/llamantino_finetuning.py \
+    --model_name "swap-uniba/LLaMAntino-2-7b-hf-ITA" \
+    --new_model_name "llamantino7b_2" \
+    --first_n 0 \
+    --num_train_epochs 14 \
+    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 16 \
+    --learning_rate 2e-4 \
+    --training_task "question-answering" \
+    --sample 1 \
+    --temperature 0.8 \
+    --top_p 0.6 \
+    --top_k 20 \
+    --num_beams 2
 
 
 # CUDA_VISIBLE_DEVICES=1 python3 llamantino_finetuning.py \
